@@ -28,7 +28,7 @@ The homepage is a stack of full-width "neighborhoods," each with its own theme a
 | 7 | Currently At | Win95 desktop | Job info in a Notepad window, desktop icons |
 | 8 | Fave Gallery | Arcade | Projects and ventures as arcade cabinets with neon CRT screens (random colors per visit) |
 | 9 | Side Quests | Fire | thy keycabz, Cryptobuds, Yo-Bi, and the CabzAmp chiptune player |
-| 10 | Movie Night | Star Wars + Back to the Future | Opening crawl ("Episode IV: A New Homepage"), time circuits with a live PRESENT TIME, 88 MPH |
+| 10 | Movie Night | Star Wars + Back to the Future | Opening crawl ("Episode IV: A New Homepage"), time circuits (destination MAR 20 2012, PRESENT TIME shows your last visit), 88 MPH |
 | 11 | The Dark Side | Spooky | Statement and a link to the branding study |
 | 12 | My Heroes | Comic book | POW! BAM! ZAP! and a wall of superheroes |
 | 13 | Kudos | Love | Mentors and friends |

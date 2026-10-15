@@ -73,17 +73,38 @@
   window.addEventListener("resize", relayout);
   window.addEventListener("load", layout); // zone heights settle once images/fonts load
 
-  /* ---------- Back to the Future: live PRESENT TIME on the time circuits ---------- */
+  /* ---------- Back to the Future: PRESENT TIME = this visitor's previous visit ----------
+     The previous visit is fixed for the whole browser session, so hopping between
+     pages doesn't overwrite it with "a few seconds ago". */
+  var MON = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+  function tcFormat(d) {
+    var hr = d.getHours() % 12 || 12;
+    return MON[d.getMonth()] + " " + String(d.getDate()).padStart(2, "0") + " " + d.getFullYear() + " " +
+      String(hr).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0") + (d.getHours() < 12 ? " AM" : " PM");
+  }
+  var lastVisit = null;
+  try {
+    var held = sessionStorage.getItem("cabz-prev-visit");
+    if (held === null) {
+      held = localStorage.getItem("cabz-last-visit") || "";
+      sessionStorage.setItem("cabz-prev-visit", held);
+      localStorage.setItem("cabz-last-visit", String(Date.now()));
+    }
+    if (held) lastVisit = new Date(Number(held));
+  } catch (e) { /* storage blocked: treat as a first visit */ }
+
   var tcNow = document.getElementById("tc-now");
   if (tcNow) {
-    var MON = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-    var tick = function () {
-      var d = new Date(), hr = d.getHours() % 12 || 12;
-      tcNow.textContent = MON[d.getMonth()] + " " + String(d.getDate()).padStart(2, "0") + " " + d.getFullYear() + " " +
-        String(hr).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0") + (d.getHours() < 12 ? " AM" : " PM");
-    };
-    tick();
-    setInterval(tick, 15000);
+    if (lastVisit && !isNaN(lastVisit)) {
+      tcNow.textContent = tcFormat(lastVisit);
+      tcNow.title = "Your last visit to Cabz's World";
+    } else {
+      // first trip: no previous visit yet, so show right now and keep ticking
+      var tick = function () { tcNow.textContent = tcFormat(new Date()); };
+      tick();
+      setInterval(tick, 15000);
+      tcNow.title = "First visit! Come back and this shows when you were last here";
+    }
   }
 
   /* ---------- the soundtrack: CabzAmp jukebox ---------- */
