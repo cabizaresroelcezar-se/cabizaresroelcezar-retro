@@ -73,6 +73,19 @@
   window.addEventListener("resize", relayout);
   window.addEventListener("load", layout); // zone heights settle once images/fonts load
 
+  /* ---------- Back to the Future: live PRESENT TIME on the time circuits ---------- */
+  var tcNow = document.getElementById("tc-now");
+  if (tcNow) {
+    var MON = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+    var tick = function () {
+      var d = new Date(), hr = d.getHours() % 12 || 12;
+      tcNow.textContent = MON[d.getMonth()] + " " + String(d.getDate()).padStart(2, "0") + " " + d.getFullYear() + " " +
+        String(hr).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0") + (d.getHours() < 12 ? " AM" : " PM");
+    };
+    tick();
+    setInterval(tick, 15000);
+  }
+
   /* ---------- the soundtrack: CabzAmp jukebox ---------- */
   if (window.top !== window) return;
   var YT_ID = "bWXazVhlyxQ";
