@@ -14,7 +14,7 @@ No build step, no framework: hand-written HTML, CSS and a pinch of JavaScript, l
 - CabzAmp: a Winamp-style player with a Web Audio chiptune + Spotify embed
 - Respects `prefers-reduced-motion`; responsive down to phone width
 
-All retro graphics are original CSS/SVG/emoji. No GIFs were borrowed.
+Animated GIFs are real archived GeoCities graphics found via the Internet Archive's [GifCities](https://gifcities.org); see [CREDITS.md](CREDITS.md).
 
 ## Run locally
 Open `index.html` in a browser, or `npx serve .`
