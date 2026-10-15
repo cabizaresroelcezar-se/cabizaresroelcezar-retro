@@ -186,10 +186,40 @@
      ========================================================== */
   var CODE = ["arrowup", "arrowup", "arrowdown", "arrowdown", "arrowleft", "arrowright", "arrowleft", "arrowright", "b", "a"];
   var pos = 0;
+  var seq = document.querySelectorAll(".kc-seq > span");
+  var kcStatus = document.querySelector(".kc-status");
+  var STATUS_IDLE = kcStatus ? kcStatus.textContent : "";
+
+  function showProgress() {
+    seq.forEach(function (s, i) { s.classList.toggle("hit", i < pos); });
+    if (kcStatus && pos > 0 && pos < CODE.length) kcStatus.textContent = "COMBO " + pos + " / " + CODE.length + "...";
+    else if (kcStatus && pos === 0) kcStatus.textContent = STATUS_IDLE;
+  }
+  function press(k) {
+    if (k === CODE[pos]) pos++;
+    else if (k === "arrowup") pos = pos === 2 ? 2 : 1; // extra ↑ at the start doesn't break the combo
+    else pos = 0;
+    if (pos === CODE.length) {
+      pos = CODE.length;
+      showProgress();
+      if (kcStatus) kcStatus.textContent = "★ CODE ACCEPTED ★";
+      cheat();
+      setTimeout(function () { pos = 0; showProgress(); }, 2500);
+      return;
+    }
+    showProgress();
+  }
   document.addEventListener("keydown", function (e) {
-    var k = (e.key || "").toLowerCase();
-    pos = k === CODE[pos] ? pos + 1 : (k === CODE[0] ? 1 : 0);
-    if (pos === CODE.length) { pos = 0; cheat(); }
+    if (e.target.closest && e.target.closest("input, textarea, select")) return; // typing in the guestbook
+    press((e.key || "").toLowerCase());
+  });
+  /* on-screen controller (works on phones too) */
+  document.querySelectorAll(".pad [data-key]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      press(b.getAttribute("data-key"));
+      b.classList.add("pressed");
+      setTimeout(function () { b.classList.remove("pressed"); }, 120);
+    });
   });
 
   function cheat() {

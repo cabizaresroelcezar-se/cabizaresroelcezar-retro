@@ -27,6 +27,7 @@ The homepage is a stack of full-width "neighborhoods," each with its own theme a
 | 6 | Toolbox | Under construction | Tech stack table, bulldozers and dinosaurs |
 | 7 | Currently At | Win95 desktop | Job info in a Notepad window, desktop icons |
 | 8 | Fave Gallery | Arcade | Projects and ventures as arcade cabinets with neon CRT screens (random colors per visit) |
+| 8½ | Cheat Codes | 8-bit | The Konami code with live progress and an on-screen controller |
 | 9 | Side Quests | Fire | thy keycabz, Cryptobuds, Yo-Bi, and the CabzAmp chiptune player |
 | 10 | Movie Night | Star Wars + Back to the Future | Opening crawl ("Episode IV: A New Homepage"), time circuits (destination MAR 20 2012, PRESENT TIME shows your last visit), 88 MPH |
 | 11 | The Dark Side | Spooky | Statement and a link to the branding study |
@@ -49,7 +50,7 @@ blueprint, hacker terminal, WordArt typography, MS Paint palette, fire).
 - **Magic-wand cursor** with a fairy-dust star trail, plus a pixel pointing-hand cursor.
 - **Dial-up modem entrance:** the IE 4 / Netscape 4 entrance buttons "dial in" with a synthesized modem handshake (dial tone, DTMF, the screech) and a Win95 connection dialog. Skippable.
 - **Screensaver:** after a minute without input, a starfield warp with a bouncing, color-shifting CABZ logo takes over (mouse/desktop only).
-- **Konami code:** type ↑ ↑ ↓ ↓ ← → ← → B A for a cheat banner and a GIF storm.
+- **Cheat Codes zone (Konami code):** type ↑ ↑ ↓ ↓ ← → ← → B A anywhere on the site (or press it on the on-screen NES-style controller, which works on phones) for a cheat banner and a GIF storm. The code lights up as you enter it.
 - **GeoCities 404 page:** "This page has moved to a new neighborhood!" with a blue-screen error message.
 - **Link previews:** Open Graph / Twitter card image (`assets/og.png`) for nice previews when the link is shared.
 - **Guestbook:** a working contact form (via [FormSubmit](https://formsubmit.co/)).
