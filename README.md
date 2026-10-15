@@ -47,6 +47,12 @@ blueprint, hacker terminal, WordArt typography, MS Paint palette, fire).
 - **Soundtrack:** the CabzAmp jukebox plays "Killing in the Name" by Rage Against the Machine through the official YouTube video. Click-to-play only (explicit lyrics); there's also a Spotify link.
 - **Chiptune:** a little Web Audio "MIDI" theme in the Side Quests zone.
 - **Magic-wand cursor** with a fairy-dust star trail, plus a pixel pointing-hand cursor.
+- **Dial-up modem entrance:** the IE 4 / Netscape 4 entrance buttons "dial in" with a synthesized modem handshake (dial tone, DTMF, the screech) and a Win95 connection dialog. Skippable.
+- **Screensaver:** after a minute without input, a starfield warp with a bouncing, color-shifting CABZ logo takes over (mouse/desktop only).
+- **Konami code:** type ↑ ↑ ↓ ↓ ← → ← → B A for a cheat banner and a GIF storm.
+- **What's New! box:** a dated update log under the menu, blinking NEW! badges included.
+- **GeoCities 404 page:** "This page has moved to a new neighborhood!" with a blue-screen error message.
+- **Link previews:** Open Graph / Twitter card image (`assets/og.png`) for nice previews when the link is shared.
 - **Guestbook:** a working contact form (via [FormSubmit](https://formsubmit.co/)).
 - **Visitor counter** (decorative, it just ticks up), marquees, blinking text, WordArt and 88×31 badges.
 - **Accessibility:** respects `prefers-reduced-motion` (animations and the crawl stop, the trail turns off), keyboard focus stays inside the Navigator window, Esc closes it, and the layout holds down to phone width.
@@ -62,11 +68,16 @@ assets/retro.css      everything visual: zones, Win95 chrome, scrollbar, CRTs, j
 assets/cabzscape.js   Cabzscape Navigator window + random neon CRT colors
 assets/geocities.js   GIF gutter scatter, time circuits clock, CabzAmp soundtrack jukebox
 assets/retro.js       counter, guestbook form, fairy-dust cursor trail, chiptune player
+assets/extras.js      dial-up modem entrance, screensaver, Konami code
+assets/og.png         1200×630 social share preview image
+404.html              GeoCities-style "page not found"
 assets/gifs/          archived GeoCities GIFs (see CREDITS.md)
 assets/cursors/       wand + hand SVG cursors
 assets/img/           logos and project images from the original portfolio
 CREDITS.md            source of every GIF
 ```
+
+All GIFs are optimized with [gifsicle](https://www.lcdf.org/gifsicle/) (`-O3 --lossy=35`, kept only when smaller), which cut the GIF folder by about 22% with no visible change.
 
 Fonts come from Google Fonts (Comic Neue, VT323, Bangers, Manrope). Tech icons in the toolbox come from
 [Devicon](https://devicon.dev/) via jsDelivr.

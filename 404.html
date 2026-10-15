@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/cabizaresroelcezar-retro/">
+  <title>404 ~*~ This page has moved! ~*~ Cabz's World</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/retro.css">
+  <style>
+    .lost { text-align: center; }
+    .lost .code { font: clamp(90px, 22vw, 200px)/1 "Bangers", Impact, sans-serif; color: #ff0; -webkit-text-stroke: 3px #000; text-shadow: 6px 6px 0 #f0f, 12px 12px 0 #00f; margin: 0; animation: mega-wave 1.6s ease-in-out infinite; display: inline-block; }
+    .lost h1 { font-family: var(--comic); color: #0ff; font-size: clamp(24px, 5vw, 36px); margin: 10px 0; }
+    .lost .bsod { max-width: 620px; margin: 18px auto; background: #0000aa; color: #fff; font: 18px/1.4 var(--pixel); text-align: left; padding: 16px 20px; border: 2px solid #aaa; }
+    .lost .bsod .hl { background: #aaa; color: #0000aa; padding: 0 6px; }
+  </style>
+</head>
+<body>
+<main class="zone z-space" style="min-height:100vh">
+  <div class="zone-inner">
+    <div class="rail left" aria-hidden="true">
+      <img class="gif" src="assets/gifs/construction-digger.gif" alt="" width="96" height="66">
+      <img class="gif" src="assets/gifs/ufo.gif" alt="" width="54" height="54">
+      <img class="gif" src="assets/gifs/astronaut-spin.gif" alt="" width="103" height="115">
+      <img class="gif" src="assets/gifs/dog-hydrant.gif" alt="" width="200" height="35">
+    </div>
+    <div class="main lost">
+      <p class="code" aria-hidden="true">404</p>
+      <h1>Uh oh! This page has moved to a new neighborhood!</h1>
+      <p><img class="gif" src="assets/gifs/construction-bar.gif" alt="Under construction" width="323" height="118"></p>
+      <div class="bsod" role="note">
+        <p style="margin-top:0;text-align:center"><span class="hl">CABZ'S WORLD</span></p>
+        <p>A fatal exception 404 has occurred at GEOCITIES:/CABZ/<span id="lost-path">???</span>. The page you were looking for has been abducted by aliens, eaten by a dinosaur, or never existed.</p>
+        <p>* Press the button below to return to the homepage.<br>* Press CTRL+ALT+DEL to restart your computer. You will lose any unsaved GIFs.</p>
+        <p style="margin-bottom:0;text-align:center">Press any key to continue <span class="blink">_</span></p>
+      </div>
+      <p><a class="btn95" href="./">🏠 Take me home to Cabz's World</a></p>
+      <p><a href="./"><img class="gif" src="assets/gifs/home-rainbow.gif" alt="Home" width="150" height="60"></a></p>
+    </div>
+    <div class="rail right" aria-hidden="true">
+      <img class="gif" src="assets/gifs/alien.gif" alt="" width="54" height="54">
+      <img class="gif" src="assets/gifs/trex.gif" alt="" width="80" height="80">
+      <img class="gif" src="assets/gifs/globe-1.gif" alt="" width="96" height="96">
+      <img class="gif" src="assets/gifs/calvin-peeing.gif" alt="" width="45" height="52" style="width:70px;image-rendering:pixelated">
+    </div>
+  </div>
+</main>
+<script>
+  (function () {
+    var p = location.pathname.replace(/^\/cabizaresroelcezar-retro\/?/, "") || "index.htm";
+    document.getElementById("lost-path").textContent = p.toUpperCase().slice(0, 40);
+    document.addEventListener("keydown", function (e) { if (e.key && e.key.length === 1 || e.key === "Enter") location.href = "./"; });
+  })();
+</script>
+</body>
+</html>
