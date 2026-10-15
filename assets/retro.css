@@ -974,14 +974,3 @@ html.nav-open { overflow: hidden; }
 .gif-rain img { position: absolute; top: -140px; height: auto; max-width: none; animation: gif-fall linear forwards; }
 @keyframes gif-fall { to { transform: translateY(calc(100vh + 160px)) rotate(var(--spin, 360deg)); } }
 
-/* ==========================================================
-   WHAT'S NEW! box
-   ========================================================== */
-.whats-new { margin: 14px 0 0; }
-.whats-new .win-body { max-height: 190px; overflow-y: auto; background: #fff; box-shadow: var(--bevel-in); margin: 4px; padding: 6px 10px; }
-.whats-new ul { list-style: none; margin: 0; padding: 0; font: 13px Tahoma, sans-serif; }
-.whats-new li { padding: 5px 0; border-bottom: 1px dotted var(--gray); display: grid; grid-template-columns: auto 1fr; gap: 0 10px; align-items: baseline; }
-.whats-new li:last-child { border-bottom: 0; }
-.whats-new time { font: bold 12px "Courier New", monospace; color: #000080; white-space: nowrap; }
-.whats-new .new-badge { margin-left: 4px; }
-.new-badge { display: inline-block; background: #f00; color: #ff0; font: bold 11px/1 Arial, sans-serif; padding: 2px 4px; transform: rotate(-8deg); vertical-align: middle; animation: blink .8s steps(1) infinite; }

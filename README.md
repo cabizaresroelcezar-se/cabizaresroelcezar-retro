@@ -50,7 +50,6 @@ blueprint, hacker terminal, WordArt typography, MS Paint palette, fire).
 - **Dial-up modem entrance:** the IE 4 / Netscape 4 entrance buttons "dial in" with a synthesized modem handshake (dial tone, DTMF, the screech) and a Win95 connection dialog. Skippable.
 - **Screensaver:** after a minute without input, a starfield warp with a bouncing, color-shifting CABZ logo takes over (mouse/desktop only).
 - **Konami code:** type ↑ ↑ ↓ ↓ ← → ← → B A for a cheat banner and a GIF storm.
-- **What's New! box:** a dated update log under the menu, blinking NEW! badges included.
 - **GeoCities 404 page:** "This page has moved to a new neighborhood!" with a blue-screen error message.
 - **Link previews:** Open Graph / Twitter card image (`assets/og.png`) for nice previews when the link is shared.
 - **Guestbook:** a working contact form (via [FormSubmit](https://formsubmit.co/)).
