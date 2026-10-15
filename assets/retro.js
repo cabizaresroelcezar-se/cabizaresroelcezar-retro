@@ -4,31 +4,74 @@
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- footer dates ---------- */
-  var now = new Date();
-  document.getElementById("year").textContent = now.getFullYear();
-  document.getElementById("updated").textContent = document.lastModified
-    ? new Date(document.lastModified).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
-    : now.toDateString();
+  /* ---------- footer year ---------- */
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   /* ---------- hit counter (decorative: it just ticks up over time) ---------- */
-  var launch = Date.UTC(2026, 9, 15);
-  var hits = 1337 + Math.max(0, Math.floor((Date.now() - launch) / 36e5)) * 3;
-  try {
-    var mine = Number(localStorage.getItem("cabz-visits") || 0) + 1;
-    localStorage.setItem("cabz-visits", String(mine));
-    hits += mine;
-  } catch (e) { /* storage blocked — counter still works */ }
   var counter = document.getElementById("counter");
-  String(hits).padStart(7, "0").split("").forEach(function (d) {
-    var s = document.createElement("span");
-    s.textContent = d;
-    counter.appendChild(s);
-  });
-  counter.setAttribute("aria-label", "Visitor counter: " + hits);
+  if (counter) {
+    var launch = Date.UTC(2026, 9, 15);
+    var hits = 1337 + Math.max(0, Math.floor((Date.now() - launch) / 36e5)) * 3;
+    try {
+      var mine = Number(localStorage.getItem("cabz-visits") || 0) + 1;
+      localStorage.setItem("cabz-visits", String(mine));
+      hits += mine;
+    } catch (e) { /* storage blocked — counter still works */ }
+    String(hits).padStart(7, "0").split("").forEach(function (d) {
+      var s = document.createElement("span");
+      s.textContent = d;
+      counter.appendChild(s);
+    });
+    counter.setAttribute("aria-label", "Visitor counter: " + hits);
+  }
+
+  /* ---------- fairy dust cursor trail ---------- */
+  if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+    var dustColors = ["#ff0", "#0ff", "#f0f", "#fff", "#0f0", "#f80"];
+    var dustGlyphs = ["✦", "✧", "★", "✶", "·"];
+    var dust = [];
+    var lastDust = 0;
+    var running = false;
+    var layer = document.createElement("div");
+    layer.setAttribute("aria-hidden", "true");
+    layer.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:9999;overflow:hidden";
+    document.body.appendChild(layer);
+
+    document.addEventListener("mousemove", function (e) {
+      var t = performance.now();
+      if (t - lastDust < 22 || dust.length > 70) return;
+      lastDust = t;
+      var el = document.createElement("span");
+      el.className = "dust";
+      el.textContent = dustGlyphs[(Math.random() * dustGlyphs.length) | 0];
+      el.style.color = dustColors[(Math.random() * dustColors.length) | 0];
+      el.style.fontSize = 9 + Math.random() * 12 + "px";
+      layer.appendChild(el);
+      dust.push({ el: el, x: e.clientX + 4, y: e.clientY + 4, vx: (Math.random() - 0.5) * 1.6, vy: -Math.random() * 1.2, life: 1, spin: (Math.random() - 0.5) * 20, r: 0 });
+      if (!running) { running = true; requestAnimationFrame(tick); }
+    });
+
+    function tick() {
+      for (var i = dust.length - 1; i >= 0; i--) {
+        var p = dust[i];
+        p.vy += 0.09;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.r += p.spin;
+        p.life -= 0.018;
+        if (p.life <= 0) { p.el.remove(); dust.splice(i, 1); continue; }
+        var twinkle = 0.55 + 0.45 * Math.sin(p.life * 30);
+        p.el.style.transform = "translate(" + p.x + "px," + p.y + "px) rotate(" + p.r + "deg) scale(" + p.life + ")";
+        p.el.style.opacity = (p.life * twinkle).toFixed(2);
+      }
+      if (dust.length) requestAnimationFrame(tick); else running = false;
+    }
+  }
 
   /* ---------- service chips -> guestbook ---------- */
   var select = document.getElementById("gb-service");
+  if (!select) return;
   var chips = document.querySelectorAll("#service-chips button");
   chips.forEach(function (chip) {
     var opt = document.createElement("option");
@@ -69,38 +112,6 @@
       .then(function () { status.textContent = "✅ Thanks for signing my guestbook! I'll write back soon."; form.reset(); })
       .catch(function () { status.textContent = "❌ Uh oh, the modem hung up. Please try again later!"; });
   });
-
-  /* ---------- webring random ---------- */
-  document.getElementById("ring-random").addEventListener("click", function (e) {
-    e.preventDefault();
-    var sites = [
-      "https://cabizaresroelcezar-se.github.io/cabizaresroelcezar/",
-      "https://github.com/cabizaresroelcezar-se",
-      "https://www.linkedin.com/in/cabizaresroelcezar/",
-      "https://www.cameronsworld.net/"
-    ];
-    window.open(sites[Math.floor(Math.random() * sites.length)], "_blank", "noopener");
-  });
-
-  /* ---------- cursor sparkle trail ---------- */
-  if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
-    var glyphs = ["✦", "✧", "★", "·", "✶"];
-    var colors = ["#ff0", "#0ff", "#f0f", "#fff", "#0f0"];
-    var last = 0;
-    document.addEventListener("mousemove", function (e) {
-      var t = performance.now();
-      if (t - last < 40) return;
-      last = t;
-      var s = document.createElement("span");
-      s.className = "sparkle";
-      s.textContent = glyphs[(Math.random() * glyphs.length) | 0];
-      s.style.color = colors[(Math.random() * colors.length) | 0];
-      s.style.left = e.clientX + 6 + "px";
-      s.style.top = e.clientY + 6 + "px";
-      document.body.appendChild(s);
-      setTimeout(function () { s.remove(); }, 900);
-    });
-  }
 
   /* ---------- CabzAmp: a tiny chiptune "MIDI" via Web Audio ---------- */
   var amp = document.getElementById("amp");

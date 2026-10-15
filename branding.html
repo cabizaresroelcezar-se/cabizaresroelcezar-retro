@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>~*~ Branding &amp; Logo Study ~*~ Cabz's World</title>
+  <meta name="description" content="Personal branding and logo study of Roel Cezar Cabizares: visual identity, logo construction, typography, and design rationale.">
+  <meta name="author" content="Roel Cezar Cabizares">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Manrope:wght@300;500;700&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/retro.css">
+  <style>
+    /* BLUEPRINT */
+    .z-blueprint {
+      background-color: #0b3d91;
+      background-image:
+        linear-gradient(#ffffff26 1px, transparent 1px),
+        linear-gradient(90deg, #ffffff26 1px, transparent 1px),
+        linear-gradient(#ffffff12 1px, transparent 1px),
+        linear-gradient(90deg, #ffffff12 1px, transparent 1px);
+      background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+      color: #e8f1ff;
+      font-family: "Courier New", monospace;
+    }
+    .bp-title { font-family: "Courier New", monospace; font-size: clamp(28px, 6vw, 42px); letter-spacing: 4px; text-transform: uppercase; margin: 0 0 8px; }
+    .logo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 18px 0; }
+    @media (max-width: 560px) { .logo-pair { grid-template-columns: 1fr; } }
+    .logo-tile { border: 2px dashed #e8f1ff; padding: 18px; text-align: center; }
+    .logo-tile.dark { background: #0a0a0a; }
+    .logo-tile.light { background: #f5f4f0; color: #333; }
+    .logo-tile img { width: 160px; }
+    .logo-tile span { display: block; margin-top: 8px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
+    .bp-notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+    .bp-note { border: 1px solid #e8f1ff88; padding: 12px; background: #ffffff0d; }
+    .bp-note b { font-size: 28px; color: #7fd4ff; display: block; }
+
+    /* THE MARK */
+    .marks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 14px; }
+    .mark { border: 1px solid #39ff14; background: #000c; padding: 12px; }
+    .mark .tag { font-family: var(--pixel); font-size: 40px; color: #fff; text-shadow: 0 0 8px #39ff14; }
+    .mark .tag em { color: #ff7518; font-style: normal; }
+    .mark h3 { font-family: var(--pixel); font-size: 24px; font-weight: normal; margin: 6px 0 4px; }
+    .mark p { margin: 0; font-size: 18px; }
+    .big-tag { font-family: var(--pixel); font-size: clamp(70px, 16vw, 140px); line-height: 1; color: #39ff14; text-shadow: 0 0 20px #39ff14; margin: 18px 0 0; }
+
+    /* WORDART TYPE SPECIMEN */
+    .specimen { font-family: Manrope, sans-serif; }
+    .specimen .row { display: grid; grid-template-columns: 120px 1fr; gap: 12px; align-items: baseline; border-bottom: 2px dotted #0004; padding: 8px 0; }
+    @media (max-width: 560px) { .specimen .row { grid-template-columns: 1fr; } }
+    .specimen .label { font-family: var(--comic); font-weight: bold; font-size: 14px; }
+    .specimen .w300 { font-weight: 300; font-size: 30px; }
+    .specimen .w500 { font-weight: 500; font-size: 30px; }
+    .specimen .w700 { font-weight: 700; font-size: 30px; }
+    .scale p { font-family: Manrope, sans-serif; margin: 4px 0; line-height: 1.1; }
+
+    /* MS PAINT PALETTE */
+    .paint-canvas { background: #fff; box-shadow: var(--bevel-in); padding: 14px; margin: 4px; }
+    .swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+    .swatch { border: 2px solid #000; background: #fff; }
+    .swatch i { display: block; height: 80px; border-bottom: 2px solid #000; }
+    .swatch div { padding: 6px; font: 13px Tahoma, sans-serif; }
+    .swatch b { display: block; }
+    .paint-wells { display: flex; flex-wrap: wrap; gap: 2px; margin-top: 6px; }
+    .paint-wells i { width: 16px; height: 16px; box-shadow: var(--bevel-in); }
+  </style>
+</head>
+<body>
+<a id="top"></a>
+
+<!-- ============ SPACE: hero ============ -->
+<header class="zone z-space">
+  <div class="zone-inner">
+    <div class="rail left" aria-hidden="true">
+      <img class="gif" src="assets/gifs/globe-4.gif" alt="" width="56" height="60">
+      <img class="gif" src="assets/gifs/painter.gif" alt="" width="85" height="110">
+      <img class="gif" src="assets/gifs/star-red.gif" alt="" width="72" height="72">
+    </div>
+    <div class="main entrance">
+      <p><a class="btn95" href="index.html">◀ Back to Cabz's World</a></p>
+      <p class="welcome">~*~ Personal Branding &amp; Logo Study ~*~</p>
+      <img class="logo" src="assets/img/logo.png" alt="CABZ logo" width="230" height="230">
+      <h1 class="wordart">Cabizares,<br>Roel Cezar</h1>
+      <p class="name comic">A complete visual identity exploration, from logo construction and typography to design rationale. Every element is intentional, rooted in who I am and what I do.</p>
+      <div class="chips">
+        <span class="btn95">Visual Identity</span>
+        <span class="btn95">Logo Design</span>
+        <span class="btn95">Branding</span>
+        <span class="btn95">Illustration</span>
+      </div>
+    </div>
+    <div class="rail right" aria-hidden="true">
+      <img class="gif" src="assets/gifs/pencil.gif" alt="" width="100" height="200" style="width:60px">
+      <img class="gif" src="assets/gifs/web-paint.gif" alt="" width="70" height="47">
+      <img class="gif" src="assets/gifs/star-blue.gif" alt="" width="59" height="59">
+    </div>
+  </div>
+</header>
+
+<!-- ============ DESKTOP: the brief ============ -->
+<section class="zone z-desktop">
+  <div class="zone-inner narrow">
+    <div class="win" style="margin:0">
+      <div class="win-title"><span class="t">📝 The_Brief.txt - Notepad</span><span class="ctrls" aria-hidden="true"><span>_</span><span>□</span><span>×</span></span></div>
+      <div class="win-menu" aria-hidden="true"><span><u>F</u>ile</span><span><u>E</u>dit</span><span><u>S</u>earch</span><span><u>H</u>elp</span></div>
+      <div class="win-body well" style="font-family:'Courier New',monospace;font-size:15px">
+        <p style="margin-top:0"><b>OBJECTIVE</b><br>Build a personal brand identity from the ground up, one that reflects my dual nature as a software engineer and visual designer. The system needed to feel modern, intentional, and adaptable across digital and print applications.</p>
+        <p><b>TOOLS USED</b><br>[Ai] Adobe Illustrator<br>[Ps] Adobe Photoshop</p>
+        <p style="margin-bottom:0"><b>SCOPE</b><br>Logo design &amp; construction, typography selection, color palette, brand guidelines, and visual language for digital applications.<span class="blink">_</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><img src="assets/gifs/div-chrome.gif" alt="" width="425" height="16"></div>
+
+<!-- ============ BLUEPRINT: logo construction ============ -->
+<section class="zone z-blueprint">
+  <div class="zone-inner">
+    <div class="rail left" aria-hidden="true">
+      <img class="gif" src="assets/gifs/pencil.gif" alt="" width="100" height="200" style="width:60px">
+      <img class="gif" src="assets/gifs/wrench.gif" alt="" width="113" height="30">
+    </div>
+    <div class="main">
+      <h2 class="bp-title">Logo Construction</h2>
+      <p>The mark is built from geometric fundamentals: every curve, angle, and proportion is derived from a structured grid system. Nothing is arbitrary.</p>
+      <div class="logo-pair">
+        <div class="logo-tile dark"><img src="assets/img/logo.png" alt="Logo, dark version" width="160" height="160" loading="lazy"><span>Dark background</span></div>
+        <div class="logo-tile light"><img src="assets/img/logo_light.png" alt="Logo, light version" width="160" height="160" loading="lazy"><span>Light background</span></div>
+      </div>
+      <div class="bp-notes">
+        <div class="bp-note"><b>01</b><strong>Geometric Precision</strong><br>Every curve follows a calculated radius. The letterforms sit on a baseline grid, maintaining optical balance across all sizes.</div>
+        <div class="bp-note"><b>02</b><strong>Scalability</strong><br>Designed to hold clarity from favicon size to billboard scale. No detail is lost at any resolution.</div>
+        <div class="bp-note"><b>03</b><strong>Dual Identity</strong><br>The mark carries both technical precision and creative warmth, reflecting the intersection of engineering and design.</div>
+      </div>
+    </div>
+    <div class="rail right" aria-hidden="true">
+      <img class="gif" src="assets/gifs/hammer-wrench.gif" alt="" width="108" height="100">
+      <img class="gif" src="assets/gifs/computer.gif" alt="" width="110" height="120">
+    </div>
+  </div>
+</section>
+
+<!-- ============ HACKER: the mark ============ -->
+<section class="zone z-hacker">
+  <div class="zone-inner narrow">
+    <div class="term">
+      <h2 style="font-size:36px;font-weight:normal;margin:0">C:\CABZ&gt; explain mark.svg</h2>
+      <p>The logo is built from the HTML self-closing tag <b>&lt;/&gt;</b>, a nod to the code that powers everything. Each letter of <b>CABZ</b> is embedded within that symbol, fusing identity with craft.</p>
+      <div class="marks">
+        <div class="mark"><div class="tag">&lt;<em>c</em> /&gt;</div><h3>Letter C</h3><p>The creative foundation: the eye for design, composition, and visual storytelling that drives every project.</p></div>
+        <div class="mark"><div class="tag">&lt;<em>a</em> /&gt;</div><h3>Letter A</h3><p>Versatility and adaptability: the ability to move across disciplines, tools, and industries.</p></div>
+        <div class="mark"><div class="tag">&lt;<em>b</em> /&gt;</div><h3>Letter B</h3><p>The engineering mindset: building systems, writing code, and constructing digital products.</p></div>
+        <div class="mark"><div class="tag">&lt;<em>z</em> /&gt;</div><h3>Letter Z</h3><p>The drive to create from nothing: taking ideas from zero to launch.</p></div>
+      </div>
+      <p class="big-tag center">&lt;/&gt;</p>
+      <p class="center" style="margin:0">HTML self-closing tag</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKY / WORDART: typography ============ -->
+<section class="zone z-sky">
+  <div class="zone-inner">
+    <div class="rail left" aria-hidden="true">
+      <img class="gif" src="assets/gifs/sun.gif" alt="" width="69" height="69">
+      <img class="gif" src="assets/gifs/butterfly-3.gif" alt="" width="89" height="66">
+    </div>
+    <div class="main">
+      <p class="wordart center" style="color:#ff2d95;text-shadow:3px 3px 0 #ffde00,6px 6px 0 #00a2ff">Typography</p>
+      <div class="panel lined">
+        <p style="margin-top:0">Type is the voice of the brand. A modern geometric sans-serif, <b>Manrope</b>, anchors the system: clean enough for interfaces, expressive enough for headlines.</p>
+        <div class="specimen">
+          <div class="row"><span class="label">Light 300</span><span class="w300">Aa Bb Cc Dd Ee Ff Gg Hh Ii</span></div>
+          <div class="row"><span class="label">Medium 500</span><span class="w500">Aa Bb Cc Dd Ee Ff Gg Hh Ii</span></div>
+          <div class="row"><span class="label">Bold 700</span><span class="w700">Aa Bb Cc Dd Ee Ff Gg Hh Ii</span></div>
+        </div>
+        <div class="scale" style="margin-top:12px">
+          <p style="font-size:48px;font-weight:700">Hero</p>
+          <p style="font-size:36px;font-weight:700">Heading XL</p>
+          <p style="font-size:28px;font-weight:500">Heading Large</p>
+          <p style="font-size:18px">Body · 18px base</p>
+          <p style="font-size:14.4px">Caption · 14.4px</p>
+          <p style="font-size:11.5px;letter-spacing:2px;text-transform:uppercase">Tag · 11.5px</p>
+        </div>
+      </div>
+    </div>
+    <div class="rail right" aria-hidden="true">
+      <img class="gif" src="assets/gifs/cloud.gif" alt="" width="80" height="46">
+      <img class="gif" src="assets/gifs/bluebird.gif" alt="" width="46" height="56">
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESKTOP / MS PAINT: palette ============ -->
+<section class="zone z-computers">
+  <div class="zone-inner narrow">
+    <div class="win" style="margin:0">
+      <div class="win-title"><span class="t">🎨 palette.bmp - Paint</span><span class="ctrls" aria-hidden="true"><span>_</span><span>□</span><span>×</span></span></div>
+      <div class="win-menu" aria-hidden="true"><span><u>F</u>ile</span><span><u>E</u>dit</span><span><u>V</u>iew</span><span><u>I</u>mage</span><span><u>C</u>olors</span><span><u>H</u>elp</span></div>
+      <div class="paint-canvas">
+        <h2 class="comic" style="margin-top:0">Color Palette</h2>
+        <p>A restrained palette anchored by black and orange. Every color earns its place: no decoration, only function. (Yes, this retro site breaks every one of these rules. On purpose.)</p>
+        <div class="swatches">
+          <div class="swatch"><i style="background:#0A0A0A"></i><div><b>Void Black</b>#0A0A0A</div></div>
+          <div class="swatch"><i style="background:#FF7518"></i><div><b>Signal Orange</b>#FF7518</div></div>
+          <div class="swatch"><i style="background:#F5F4F0"></i><div><b>Warm White</b>#F5F4F0</div></div>
+          <div class="swatch"><i style="background:#333333"></i><div><b>Body Text</b>#333333</div></div>
+          <div class="swatch"><i style="background:#999999"></i><div><b>Secondary</b>#999999</div></div>
+        </div>
+      </div>
+      <div class="paint-wells" aria-hidden="true">
+        <i style="background:#000"></i><i style="background:#808080"></i><i style="background:#800000"></i><i style="background:#808000"></i><i style="background:#008000"></i><i style="background:#008080"></i><i style="background:#000080"></i><i style="background:#800080"></i><i style="background:#ff7518"></i><i style="background:#fff"></i><i style="background:#c0c0c0"></i><i style="background:#f00"></i><i style="background:#ff0"></i><i style="background:#0f0"></i><i style="background:#0ff"></i><i style="background:#00f"></i><i style="background:#f0f"></i><i style="background:#f5f4f0"></i>
+      </div>
+      <div class="win-status"><span>For Help, click Help Topics on the Help Menu.</span><span>320,240</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIRE: Behance CTA ============ -->
+<section class="zone z-flames">
+  <div class="zone-inner narrow center">
+    <div class="collage" aria-hidden="true">
+      <img class="gif" src="assets/gifs/fire-2.gif" alt="" width="97" height="200" style="height:110px;width:auto">
+      <p class="flame-text">SEE THE FULL PROJECT</p>
+      <img class="gif" src="assets/gifs/fire-2.gif" alt="" width="97" height="200" style="height:110px;width:auto">
+    </div>
+    <p>View the complete personal branding case study with full-resolution mockups, additional logo explorations, and detailed design breakdowns on Behance.</p>
+    <p><a class="btn95" href="https://www.behance.net/gallery/157368341/Cabizares-Roel-Cezar-Personal-Branding" target="_blank" rel="noopener">🔥 View on Behance</a> <a class="btn95" href="index.html">◀ Back to Home</a></p>
+    <div class="collage" aria-hidden="true">
+      <img class="gif" src="assets/gifs/fire-2.gif" alt="" width="97" height="200" style="height:70px;width:auto">
+      <img class="gif" src="assets/gifs/fire-1.gif" alt="" width="256" height="256" style="width:110px">
+      <img class="gif" src="assets/gifs/fire-2.gif" alt="" width="97" height="200" style="height:70px;width:auto">
+    </div>
+  </div>
+</section>
+
+<footer class="zone z-hacker site-footer">
+  <div class="zone-inner narrow">
+    <p><a href="index.html"><img class="gif" src="assets/gifs/home-rainbow.gif" alt="Back to Cabz's World" width="150" height="60"></a></p>
+    <p>© <span id="year">2026</span> Roel Cezar Cabizares</p>
+  </div>
+</footer>
+
+<a class="btn95 to-top" href="#top" aria-label="Back to top">▲ Top</a>
+<script src="assets/retro.js"></script>
+</body>
+</html>

@@ -8,9 +8,11 @@ No build step, no framework: hand-written HTML, CSS and a pinch of JavaScript, l
 
 ## What's inside
 - Old-school Win95 scrollbar (dithered track, ridged silver thumb, pixel arrow buttons)
-- Tiled backgrounds, Win95 window chrome, marquees, blink, rainbow WordArt
+- Cameron's World-style themed zones: space, sky, vaporwave, ocean, under construction, Win95 desktop, arcade, fire, spooky, love, kawaii, hacker
+- Branding & logo study page (`branding.html`)
+- Magic-wand cursor with a fairy-dust trail; neon CRT treatment for project logos
 - "Under construction" sign, visitor counter, 88×31 badges, webring
-- Guestbook (contact form via FormSubmit), cursor sparkle trail
+- Guestbook (contact form via FormSubmit)
 - CabzAmp: a Winamp-style player with a Web Audio chiptune + Spotify embed
 - Respects `prefers-reduced-motion`; responsive down to phone width
 
