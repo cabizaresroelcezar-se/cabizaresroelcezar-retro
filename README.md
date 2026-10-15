@@ -11,7 +11,7 @@ No build step, no framework: hand-written HTML, CSS and a pinch of JavaScript, l
 - Cameron's World-style themed zones: space, sky, vaporwave, ocean, under construction, Win95 desktop, arcade, fire, spooky, love, kawaii, hacker
 - Branding & logo study page (`branding.html`)
 - Magic-wand cursor with a fairy-dust trail; neon CRT treatment for project logos
-- "Under construction" sign, visitor counter, 88×31 badges, webring
+- "Under construction" sign, visitor counter, 88×31 badges
 - Guestbook (contact form via FormSubmit)
 - CabzAmp: a Winamp-style player with a Web Audio chiptune + Spotify embed
 - Respects `prefers-reduced-motion`; responsive down to phone width
