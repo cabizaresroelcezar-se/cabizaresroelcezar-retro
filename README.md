@@ -15,6 +15,8 @@ No build step, no framework: hand-written HTML, CSS and a pinch of JavaScript, l
 - "Under construction" sign, visitor counter, 88×31 badges
 - Guestbook (contact form via FormSubmit)
 - CabzAmp: a Winamp-style player with a Web Audio chiptune + Spotify embed
+- Soundtrack jukebox: "Killing in the Name" by Rage Against the Machine via the official YouTube video (explicit; never autoplays)
+- GIFs scattered across the left and right gutters on wide screens
 - Respects `prefers-reduced-motion`; responsive down to phone width
 
 Animated GIFs are real archived GeoCities graphics found via the Internet Archive's [GifCities](https://gifcities.org); see [CREDITS.md](CREDITS.md).
