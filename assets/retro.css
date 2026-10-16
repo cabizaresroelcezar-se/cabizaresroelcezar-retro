@@ -1065,3 +1065,8 @@ html.lite .zone-inner { grid-template-columns: minmax(0, 1fr); }
 }
 html.cabz-party body { animation: cabz-hue 1s linear 3; }
 @keyframes cabz-hue { to { filter: hue-rotate(360deg); } }
+
+/* ---------- big screens: everything in the page 10% larger, no browser zoom needed ---------- */
+@media (min-width: 1440px) {
+  .zone { zoom: 1.1; }
+}

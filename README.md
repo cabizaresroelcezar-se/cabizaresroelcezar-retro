@@ -59,6 +59,7 @@ blueprint, hacker terminal, WordArt typography, MS Paint palette, fire).
 - **Link previews:** Open Graph / Twitter card image (`assets/og.png`) for nice previews when the link is shared.
 - **Guestbook:** a working contact form (via [FormSubmit](https://formsubmit.co/)).
 - **Visitor counter** (decorative, it just ticks up), marquees, blinking text, WordArt and 88×31 badges.
+- **Big-screen scaling:** on screens 1440px and wider, every section renders 10% larger (CSS `zoom`), so text is readable without browser zoom. Pop-up windows and fixed widgets keep their size.
 - **Accessibility:** respects `prefers-reduced-motion` (animations and the crawl stop, the trail turns off), keyboard focus stays inside the Navigator window, Esc closes it, and the layout holds down to phone width.
 
 ## How it's built
