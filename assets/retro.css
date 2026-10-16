@@ -1168,6 +1168,10 @@ html.lite .cn-guide li img, html.lite .jolen img { display: block !important; }
 .an-card.spirit { --an: #7fd4ff; } .an-card.dunk { --an: #ff6b6b; } .an-card.dbz { --an: #ffa31a; }
 .an-card.poke { --an: #ffe600; } .an-card.ygo { --an: #c79bff; } .an-card.voltes { --an: #4d7dff; }
 .an-card.voltes .an-art { background: #000; }
+.an-card.dunk .an-art { background: #7ab8ea url("gifs/bg-snow-blue.gif"); }
+.an-card.dbz .an-art { background: #000 url("gifs/bg-sparkle-black.gif"); }
+.an-card.poke .an-art { background: #e0f4ff url("gifs/bg-pastel-stars.gif"); }
+.an-card.ygo .an-art { background: #6b3fb5 url("gifs/bg-purple-swirl.gif"); }
 .z-anime .gif.px { image-rendering: pixelated; }
 
 /* ---------- TOY BOX (sari-sari store shelf) ---------- */
