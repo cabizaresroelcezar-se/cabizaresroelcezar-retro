@@ -31,7 +31,7 @@ The homepage is a stack of full-width "neighborhoods," each with its own theme a
 | 9 | Side Quests | Fire | thy keycabz, Cryptobuds, Yo-Bi, and the CabzAmp chiptune player |
 | 10 | Movie Night | Star Wars + Back to the Future | Opening crawl ("Episode IV: A New Homepage"), time circuits (destination MAR 20 2012, PRESENT TIME shows your last visit), 88 MPH |
 | 10½ | Cabztoon Network | Cartoon Network checkerboard | A TV with a working remote. CN: Saturday mornings 2001–2002 (Dexter, Powerpuff Girls, Johnny Bravo, Courage, Ed Edd n Eddy, my fave Codename: Kids Next Door, Billy & Mandy) plus a KND mission file. Disney Channel: Art Attack. Channel 2: Sineskwela and Hiraya Manawari. Channel 23: Studio 23's Barkada Trip, starring Bok (a.k.a. Kalbo) and the barkada. Jack TV: WWE |
-| 10¾ | Anime Hour | Drifting winged-hearts GIF tile | Ghost Fighter, Slam Dunk, Dragon Ball Z, Pokémon, Yu-Gi-Oh! and Voltes V, each with its catchphrase |
+| 10¾ | Anime Hour | Dark CRT screen: scanlines, RGB phosphor mask, vignette and a rolling refresh bar | Ghost Fighter, Slam Dunk, Dragon Ball Z, Pokémon, Yu-Gi-Oh! and Voltes V, each with its catchphrase |
 | 10⅞ | Toy Box | Drifting blue-clouds GIF tile, sari-sari store shelf | Tamagotchi, jolen, Game Boy Color/Advance, Beyblade, Crush Gear, Pokémon pogs and teks, with price-tag captions |
 | 10⅞+ | Myx Daily Top 10 | Music-channel black | Ten OPM hits from the mid-2000s (Orange & Lemons, Hale, Sugarfree, Rivermaya / Rico Blanco, Kitchie Nadal, Cueshé, Kamikazee, Imago, Parokya ni Edgar), ranked by Spotify streams, that play right on the page through Spotify |
 | 11 | The Dark Side | Spooky | Statement and a link to the branding study |

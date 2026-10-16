@@ -1148,18 +1148,33 @@ html.lite .cn-guide li img, html.lite .jolen img { display: block !important; }
 
 /* ---------- ANIME HOUR ---------- */
 .z-anime {
-  background: #fff url("gifs/bg-wing-hearts.gif");
-  animation: bg-drift 18s linear infinite;
-  color: #111;
+  background:
+    radial-gradient(ellipse at center, #0000 45%, #000e 100%),
+    repeating-linear-gradient(#0000 0 2px, #0009 2px 3px),
+    repeating-linear-gradient(90deg, #ff000010 0 1px, #00ff0010 1px 2px, #0000ff10 2px 3px),
+    radial-gradient(ellipse at 50% 35%, #16303a 0%, #0a1418 55%, #030506 100%);
+  box-shadow: inset 0 0 140px #000, inset 0 0 0 6px #111;
+  color: #dff6ff;
 }
-@keyframes bg-drift { to { background-position: 200px 100px; } }
+.z-anime::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -160px;
+  height: 160px;
+  pointer-events: none;
+  background: linear-gradient(#0000, #8fe3ff12 45%, #8fe3ff1f 50%, #0000);
+  animation: crt-roll 8s linear infinite;
+}
+@keyframes crt-roll { from { top: -160px; } to { top: 100%; } }
 .z-anime .zone-inner { text-align: center; }
-.an-kana { margin: 0; font: 700 22px/1 sans-serif; color: #e4002b; letter-spacing: 6px; }
+.an-kana { margin: 0; font: 700 22px/1 sans-serif; color: #ff3355; text-shadow: 0 0 8px #ff3355; letter-spacing: 6px; }
 .an-title { margin: 4px 0 0; font: italic 400 clamp(44px, 10vw, 84px)/1 "Arial Black", Impact, sans-serif; color: #ffe600; -webkit-text-stroke: 3px #000; text-shadow: 6px 6px 0 #e4002b, 10px 10px 0 #000; letter-spacing: 2px; }
-.an-sub { font: 700 20px var(--comic); margin: 14px 0 18px; }
+.an-sub { font: 700 20px var(--comic); margin: 14px 0 18px; color: #bff2ff; text-shadow: 0 0 6px #4fd8ff; }
 .an-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 @media (max-width: 760px) { .an-grid { grid-template-columns: repeat(2, 1fr); } }
-.an-card { margin: 0; background: #fff; border: 4px solid #000; box-shadow: 6px 6px 0 #000; display: flex; flex-direction: column; transform: rotate(-1deg); }
+.an-card { margin: 0; color: #111; background: #fff; border: 4px solid #000; box-shadow: 0 0 0 2px #3a4a50, 0 0 22px #4fd8ff66; display: flex; flex-direction: column; transform: rotate(-1deg); }
 .an-card:nth-child(even) { transform: rotate(1.2deg); }
 .an-art { height: 170px; display: grid; place-items: center; overflow: hidden; border-bottom: 4px solid #000; background: repeating-linear-gradient(135deg, var(--an, #ffe600) 0 10px, #fff 10px 20px); }
 .an-art img { max-height: 160px; max-width: 100%; width: auto; height: auto; }
@@ -1183,7 +1198,7 @@ html.lite .cn-guide li img, html.lite .jolen img { display: block !important; }
   color: #2b1600;
 }
 @keyframes bg-drift-2 { to { background-position: -200px 200px; } }
-@media (prefers-reduced-motion: reduce) { .z-anime, .z-toys { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .z-toys { animation: none; } .z-anime::before { display: none; } }
 .z-toys .zone-inner { text-align: center; }
 .toy-title { margin: 0; }
 .toy-title span { display: inline-block; font: 400 clamp(40px, 9vw, 72px)/1 "Arial Black", Impact, sans-serif; color: #fff; background: #d62d20; border: 4px solid #2b1600; padding: 6px 22px; box-shadow: 8px 8px 0 #2b1600; transform: rotate(-2deg); }
