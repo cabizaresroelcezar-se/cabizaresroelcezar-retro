@@ -727,24 +727,47 @@
   <div class="zone-inner narrow">
     <h2 class="cn-logo" aria-label="Cabz Network"><span class="cn-row"><span>C</span><span class="w">A</span><span>B</span><span class="w">Z</span></span><span class="cn-row"><span>N</span><span class="w">E</span><span>T</span><span class="w">W</span><span>O</span><span class="w">R</span><span>K</span></span></h2>
     <p class="cn-sub">Saturday mornings, 2001–2002: cereal, pajamas, and the best cartoons ever made.</p>
-    <div class="cn-tv">
-      <div class="cn-tv-head"><span>📺 TV GUIDE</span><span>SATURDAY</span><span class="blink">● LIVE</span></div>
-      <ol class="cn-guide">
-        <li><span class="cn-time">7:00<small>AM</small></span><img class="gif" src="assets/gifs/cn-dexter-run.gif" alt="Dexter" width="130" height="112" loading="lazy"><b>Dexter's Laboratory</b></li>
-        <li><span class="cn-time">7:30<small>AM</small></span><img class="gif" src="assets/gifs/cn-ppg-fly.gif" alt="Blossom, Bubbles and Buttercup" width="273" height="197" loading="lazy"><b>The Powerpuff Girls</b></li>
-        <li><span class="cn-time">8:00<small>AM</small></span><img class="gif" src="assets/gifs/cn-bravo.gif" alt="Johnny Bravo" width="202" height="250" loading="lazy"><b>Johnny Bravo</b></li>
-        <li><span class="cn-time">8:30<small>AM</small></span><img class="gif" src="assets/gifs/cn-courage.gif" alt="Courage" width="164" height="201" loading="lazy"><b>Courage the Cowardly Dog</b></li>
-        <li><span class="cn-time">9:00<small>AM</small></span><img class="gif" src="assets/gifs/cn-ed.gif" alt="Ed" width="200" height="170" loading="lazy"><b>Ed, Edd n Eddy</b></li>
-        <li class="fave"><span class="cn-time">9:30<small>AM</small></span><span class="fave-tag">★ MY FAVE ★</span><img class="gif" src="assets/gifs/knd-countdown.gif" alt="KND countdown with Numbuhs 5, 4, 3, 2 and 1: KND Battle Stations!" width="161" height="47" loading="lazy"><b>Codename: Kids Next Door</b></li>
-        <li><span class="cn-time">10:30<small>AM</small></span><img class="gif" src="assets/gifs/cn-billy-mandy.gif" alt="The Grim Adventures of Billy and Mandy logo" width="252" height="116" loading="lazy"><b>The Grim Adventures of Billy &amp; Mandy</b></li>
-      </ol>
-    </div>
-    <div class="flip">
-      <div class="flip-head"><span>📡 CHANNEL FLIP</span><span>DISNEY CHANNEL</span></div>
-      <div class="flip-body">
-        <img class="gif" src="assets/gifs/art-attack.gif" alt="Everybody loves Art Attack: Neil Buchanan holding paintbrushes" width="100" height="100" loading="lazy">
-        <div><b>Art Attack</b><p>Neil Buchanan, PVA glue, and a giant masterpiece made out of stuff on the floor. Where it all started for this designer.</p><p class="flip-try">Try this at home! (Ask a grown-up first.)</p></div>
+    <div class="cn-tv" data-tv>
+      <div class="cn-tv-head"><span class="cn-ch-name">📺 CARTOON NETWORK</span><span class="cn-day">SATURDAY</span><span class="blink">● LIVE</span></div>
+      <div class="cn-screen" id="ch-cn" data-ch="cn" data-name="📺 CARTOON NETWORK" data-day="SATURDAY">
+        <ol class="cn-guide">
+          <li><span class="cn-time">7:00<small>AM</small></span><img class="gif" src="assets/gifs/cn-dexter-run.gif" alt="Dexter" width="130" height="112" loading="lazy"><b>Dexter's Laboratory</b></li>
+          <li><span class="cn-time">7:30<small>AM</small></span><img class="gif" src="assets/gifs/cn-ppg-fly.gif" alt="Blossom, Bubbles and Buttercup" width="273" height="197" loading="lazy"><b>The Powerpuff Girls</b></li>
+          <li><span class="cn-time">8:00<small>AM</small></span><img class="gif" src="assets/gifs/cn-bravo.gif" alt="Johnny Bravo" width="202" height="250" loading="lazy"><b>Johnny Bravo</b></li>
+          <li><span class="cn-time">8:30<small>AM</small></span><img class="gif" src="assets/gifs/cn-courage.gif" alt="Courage" width="164" height="201" loading="lazy"><b>Courage the Cowardly Dog</b></li>
+          <li><span class="cn-time">9:00<small>AM</small></span><img class="gif" src="assets/gifs/cn-ed.gif" alt="Ed" width="200" height="170" loading="lazy"><b>Ed, Edd n Eddy</b></li>
+          <li class="fave"><span class="cn-time">9:30<small>AM</small></span><span class="fave-tag">★ MY FAVE ★</span><img class="gif" src="assets/gifs/knd-countdown.gif" alt="KND countdown with Numbuhs 5, 4, 3, 2 and 1: KND Battle Stations!" width="161" height="47" loading="lazy"><b>Codename: Kids Next Door</b></li>
+          <li><span class="cn-time">10:30<small>AM</small></span><img class="gif" src="assets/gifs/cn-billy-mandy.gif" alt="The Grim Adventures of Billy and Mandy logo" width="252" height="116" loading="lazy"><b>The Grim Adventures of Billy &amp; Mandy</b></li>
+        </ol>
       </div>
+      <div class="cn-screen" id="ch-disney" data-ch="disney" data-name="📺 DISNEY CHANNEL" data-day="AFTER SCHOOL">
+        <div class="flip-body">
+          <img class="gif" src="assets/gifs/art-attack.gif" alt="Everybody loves Art Attack: Neil Buchanan holding paintbrushes" width="100" height="100" loading="lazy">
+          <div><b>Art Attack</b><p>Neil Buchanan, PVA glue, and a giant masterpiece made out of stuff on the floor. Where it all started for this designer.</p><p class="flip-try">Try this at home! (Ask a grown-up first.)</p></div>
+        </div>
+      </div>
+      <div class="cn-screen" id="ch-abs" data-ch="abs" data-name="📺 CHANNEL 2" data-day="WEEKDAY AFTERNOON">
+        <div class="ph-shows">
+          <div class="ph-show sine"><img class="gif" src="assets/gifs/sci-beaker.gif" alt="A bubbling science beaker" width="60" height="100" loading="lazy"><b>Sineskwela</b><p>Science class, but on TV. Way better than the real one.</p></div>
+          <div class="ph-show hiraya"><img class="gif" src="assets/gifs/fairy.gif" alt="A sparkling fairy" width="105" height="103" loading="lazy"><b>Hiraya Manawari</b><p>Fairy tales, magic, and a lesson at the end of every episode.</p></div>
+        </div>
+      </div>
+      <div class="cn-screen" id="ch-s23" data-ch="s23" data-name="📺 STUDIO 23" data-day="ANYTIME">
+        <div class="s23">
+          <img class="gif s23-static" src="assets/gifs/tv-static.gif" alt="" width="131" height="106" loading="lazy">
+          <p class="s23-logo" aria-label="Studio 23"><span>STUDIO</span><b>23</b></p>
+          <p class="s23-tag">Kabarkada!</p>
+          <p class="s23-next">Next on Cabz's World: <a href="#anime">Anime Hour ▼</a></p>
+        </div>
+      </div>
+      <div class="cn-static" aria-hidden="true"></div>
+    </div>
+    <div class="remote" role="group" aria-label="TV remote: change the channel">
+      <span class="remote-ir" aria-hidden="true"></span>
+      <button type="button" class="rbtn" aria-controls="ch-cn" aria-pressed="true">CN</button>
+      <button type="button" class="rbtn" aria-controls="ch-disney" aria-pressed="false">DISNEY</button>
+      <button type="button" class="rbtn" aria-controls="ch-abs" aria-pressed="false">CH 2</button>
+      <button type="button" class="rbtn" aria-controls="ch-s23" aria-pressed="false">CH 23</button>
     </div>
     <p class="knd-file"><span>KND MISSION FILE</span> OPERATION: C.A.B.Z. <small>Cartoons Always Beat Zchoolwork</small></p>
     <p class="cn-foot">Don't touch that dial! <span class="blink">▶</span> Stay tuned for more Cartoon Cartoons.</p>
@@ -770,6 +793,73 @@
     <img class="gif" src="assets/gifs/cn-bubbles-2.gif" alt="" width="68" height="66" loading="lazy">
     <img class="gif" src="assets/gifs/cn-scooby-2.gif" alt="" width="160" height="232" loading="lazy">
     <img class="gif" src="assets/gifs/cn-ppg-logo.gif" alt="" width="119" height="97" loading="lazy">
+  </div>
+</section>
+
+<!-- ============ ZONE: ANIME HOUR ============ -->
+<section class="zone z-anime" id="anime">
+  <div class="zone-inner narrow">
+    <p class="an-kana" aria-hidden="true">アニメ・アワー</p>
+    <h2 class="an-title">ANIME HOUR</h2>
+    <p class="an-sub">After school, before homework. (Allegedly.)</p>
+    <div class="an-grid">
+      <figure class="an-card spirit"><div class="an-art"><img class="gif" src="assets/gifs/an-yyh-cast.gif" alt="The Yu Yu Hakusho cast" width="400" height="250" loading="lazy"></div><figcaption><b>Ghost Fighter</b><span class="an-line">Eugene, Dennis, Vincent &amp; Alfred</span></figcaption></figure>
+      <figure class="an-card dunk"><div class="an-art"><img class="gif" src="assets/gifs/an-sakuragi.gif" alt="Hanamichi Sakuragi dribbling" width="150" height="186" loading="lazy"></div><figcaption><b>Slam Dunk</b><span class="an-line">Sakuragi, the self-proclaimed genius</span></figcaption></figure>
+      <figure class="an-card dbz"><div class="an-art"><img class="gif" src="assets/gifs/an-goku.gif" alt="Goku" width="122" height="242" loading="lazy"></div><figcaption><b>Dragon Ball Z</b><span class="an-line">KA-ME-HA-ME-HA!</span></figcaption></figure>
+      <figure class="an-card poke"><div class="an-art"><img class="gif" src="assets/gifs/an-pikachu.gif" alt="Pikachu" width="96" height="148" loading="lazy"></div><figcaption><b>Pokémon</b><span class="an-line">Gotta catch 'em all!</span></figcaption></figure>
+      <figure class="an-card ygo"><div class="an-art"><img class="gif" src="assets/gifs/an-yami-yugi.gif" alt="Yami Yugi" width="146" height="178" loading="lazy"></div><figcaption><b>Yu-Gi-Oh!</b><span class="an-line">It's time to duel!</span></figcaption></figure>
+      <figure class="an-card voltes"><div class="an-art"><img class="gif" src="assets/gifs/an-voltes-logo.gif" alt="The Voltes V logo forming" width="160" height="120" loading="lazy"></div><figcaption><b>Voltes V</b><span class="an-line">Let's volt in!</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="collage gif-row" aria-hidden="true">
+    <img class="gif" src="assets/gifs/an-yyh-1.gif" alt="" width="160" height="153" loading="lazy">
+    <img class="gif" src="assets/gifs/an-ssj-aura.gif" alt="" width="77" height="144" loading="lazy">
+    <img class="gif" src="assets/gifs/an-poke-1.gif" alt="" width="58" height="76" loading="lazy">
+    <img class="gif px" src="assets/gifs/an-sakuragi-dribble.gif" alt="" width="80" height="100" loading="lazy">
+    <img class="gif" src="assets/gifs/an-yugi.gif" alt="" width="61" height="190" loading="lazy">
+    <img class="gif" src="assets/gifs/an-dbz-logo.gif" alt="" width="100" height="60" loading="lazy">
+    <img class="gif" src="assets/gifs/an-poke-3.gif" alt="" width="57" height="57" loading="lazy">
+    <img class="gif" src="assets/gifs/an-yyh-kurama.gif" alt="" width="50" height="50" loading="lazy">
+    <img class="gif" src="assets/gifs/an-vegeta.gif" alt="" width="77" height="115" loading="lazy">
+    <img class="gif" src="assets/gifs/an-volt-in.gif" alt="" width="160" height="120" loading="lazy">
+    <img class="gif" src="assets/gifs/an-puzzle.gif" alt="" width="131" height="212" loading="lazy">
+    <img class="gif" src="assets/gifs/an-poke-2.gif" alt="" width="66" height="70" loading="lazy">
+    <img class="gif" src="assets/gifs/an-gohan.gif" alt="" width="74" height="88" loading="lazy">
+    <img class="gif" src="assets/gifs/an-dunk.gif" alt="" width="136" height="163" loading="lazy">
+    <img class="gif" src="assets/gifs/an-poke-4.gif" alt="" width="63" height="96" loading="lazy">
+    <img class="gif" src="assets/gifs/an-ssj-goku.gif" alt="" width="79" height="114" loading="lazy">
+    <img class="gif px" src="assets/gifs/an-kaiba.gif" alt="" width="64" height="64" loading="lazy">
+    <img class="gif" src="assets/gifs/an-yyh-2.gif" alt="" width="50" height="50" loading="lazy">
+    <img class="gif px" src="assets/gifs/an-poke-5.gif" alt="" width="80" height="114" loading="lazy">
+    <img class="gif" src="assets/gifs/an-ssj-2.gif" alt="" width="96" height="130" loading="lazy">
+    <img class="gif" src="assets/gifs/an-poke-2000.gif" alt="" width="88" height="31" loading="lazy">
+  </div>
+</section>
+
+<!-- ============ ZONE: TOY BOX (sari-sari store shelf) ============ -->
+<section class="zone z-toys" id="toys">
+  <div class="zone-inner narrow">
+    <h2 class="toy-title"><span>TOY BOX</span></h2>
+    <p class="toy-sub">Where all the baon money went.</p>
+    <div class="shelf">
+      <figure class="toy"><img class="gif" src="assets/gifs/toy-tamagotchi.gif" alt="A Tamagotchi" width="275" height="320" loading="lazy"><figcaption><b>Tamagotchi</b><span class="tag">Died 3 times. RIP.</span></figcaption></figure>
+      <figure class="toy"><img class="gif" src="assets/gifs/toy-gb-pocket.gif" alt="A red Game Boy Pocket" width="125" height="125" loading="lazy"><figcaption><b>Game Boy Pocket</b><span class="tag">4 AA batteries, zero backlight</span></figcaption></figure>
+      <figure class="toy"><img class="gif" src="assets/gifs/toy-gbc.gif" alt="A purple Game Boy Color" width="80" height="114" loading="lazy"><figcaption><b>Game Boy Color</b><span class="tag">Pokémon Gold, 200 hours</span></figcaption></figure>
+      <figure class="toy"><img class="gif" src="assets/gifs/toy-gba.gif" alt="A Game Boy Advance" width="100" height="100" loading="lazy"><figcaption><b>Game Boy Advance</b><span class="tag">Played under the blanket</span></figcaption></figure>
+      <figure class="toy"><img class="gif" src="assets/gifs/toy-beyblade.gif" alt="Tyson from Beyblade with his launcher" width="150" height="200" loading="lazy"><figcaption><b>Beyblade</b><span class="tag">3, 2, 1... LET IT RIP!</span></figcaption></figure>
+      <figure class="toy"><div class="tazo-stack"><img class="gif" src="assets/gifs/toy-tazo-ash.gif" alt="A Pokémon Tazo with Ash" width="112" height="113" loading="lazy"><img class="gif" src="assets/gifs/toy-tazo-ursaring.gif" alt="A Pokémon Tazo with Ursaring" width="112" height="112" loading="lazy"></div><figcaption><b>Tazos</b><span class="tag">Free inside every chip bag</span></figcaption></figure>
+      <figure class="toy"><div class="tex-fan" role="img" aria-label="A fan of three tex cards"><i>TEX</i><i>TEX</i><i>TEX</i></div><figcaption><b>Tex cards</b><span class="tag">Panalo! Winner takes all</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="collage gif-row" aria-hidden="true">
+    <img class="gif" src="assets/gifs/toy-tazo-jiggly.gif" alt="" width="112" height="112" loading="lazy">
+    <img class="gif" src="assets/gifs/toy-tamagotchi-2.gif" alt="" width="241" height="298" loading="lazy">
+    <img class="gif" src="assets/gifs/toy-tazo-totodile.gif" alt="" width="112" height="112" loading="lazy">
+    <img class="gif" src="assets/gifs/toy-gbc-2.gif" alt="" width="38" height="58" loading="lazy">
+    <img class="gif" src="assets/gifs/toy-tazo-2.gif" alt="" width="112" height="112" loading="lazy">
+    <img class="gif" src="assets/gifs/toy-tazo-slowpoke.gif" alt="" width="112" height="112" loading="lazy">
+    <img class="gif" src="assets/gifs/toy-tamagotchi-3.gif" alt="" width="300" height="300" loading="lazy">
+    <img class="gif" src="assets/gifs/toy-tazo-3.gif" alt="" width="112" height="112" loading="lazy">
   </div>
 </section>
 

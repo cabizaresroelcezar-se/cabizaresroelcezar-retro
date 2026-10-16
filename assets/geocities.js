@@ -155,3 +155,34 @@
   if (window.innerWidth < 700) { box.classList.add("folded"); fold.textContent = "□"; fold.setAttribute("aria-expanded", "false"); }
   if (reduceMotion) box.classList.add("no-motion");
 })();
+
+/* Cabz Network TV remote: flip between channels with a burst of static. */
+(function () {
+  "use strict";
+  var tv = document.querySelector("[data-tv]");
+  if (!tv) return;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var screens = tv.querySelectorAll(".cn-screen");
+  var btns = document.querySelectorAll(".remote .rbtn");
+  var remote = document.querySelector(".remote");
+  var nameEl = tv.querySelector(".cn-ch-name"), dayEl = tv.querySelector(".cn-day"), noise = tv.querySelector(".cn-static");
+  tv.classList.add("tuned");
+
+  function tune(id, flash) {
+    screens.forEach(function (s) { s.hidden = s.id !== id; });
+    btns.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("aria-controls") === id ? "true" : "false"); });
+    var cur = document.getElementById(id);
+    nameEl.textContent = cur.getAttribute("data-name");
+    dayEl.textContent = cur.getAttribute("data-day");
+    if (flash) {
+      remote.classList.add("blip");
+      setTimeout(function () { remote.classList.remove("blip"); }, 150);
+      if (!reduceMotion) { noise.classList.remove("on"); void noise.offsetWidth; noise.classList.add("on"); }
+      window.dispatchEvent(new Event("resize")); // the zone changed height: re-place the gutter GIFs
+    }
+  }
+  btns.forEach(function (b) {
+    b.addEventListener("click", function () { tune(b.getAttribute("aria-controls"), true); });
+  });
+  tune("ch-cn", false);
+})();

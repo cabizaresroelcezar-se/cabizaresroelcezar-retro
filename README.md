@@ -30,7 +30,9 @@ The homepage is a stack of full-width "neighborhoods," each with its own theme a
 | 8½ | Cheat Codes | 8-bit | The Konami code with live progress and an on-screen controller |
 | 9 | Side Quests | Fire | thy keycabz, Cryptobuds, Yo-Bi, and the CabzAmp chiptune player |
 | 10 | Movie Night | Star Wars + Back to the Future | Opening crawl ("Episode IV: A New Homepage"), time circuits (destination MAR 20 2012, PRESENT TIME shows your last visit), 88 MPH |
-| 10½ | Cabz Network | Cartoon Network checkerboard | Saturday mornings, 2001–2002: a TV guide (Dexter, Powerpuff Girls, Johnny Bravo, Courage, Ed Edd n Eddy, my fave Codename: Kids Next Door, Billy & Mandy), a KND mission file, a Disney Channel "channel flip" to Art Attack, with characters spilling into the margins |
+| 10½ | Cabz Network | Cartoon Network checkerboard | A TV with a working remote. CN: Saturday mornings 2001–2002 (Dexter, Powerpuff Girls, Johnny Bravo, Courage, Ed Edd n Eddy, my fave Codename: Kids Next Door, Billy & Mandy) plus a KND mission file. Disney Channel: Art Attack. Channel 2: Sineskwela and Hiraya Manawari. Channel 23: Studio 23, Kabarkada! |
+| 10¾ | Anime Hour | Manga speed lines | Ghost Fighter, Slam Dunk, Dragon Ball Z, Pokémon, Yu-Gi-Oh! and Voltes V, each with its catchphrase |
+| 10⅞ | Toy Box | Sari-sari store shelf | Tamagotchi, Game Boy Pocket/Color/Advance, Beyblade, Pokémon Tazos and tex cards, with price-tag captions |
 | 11 | The Dark Side | Spooky | Statement and a link to the branding study |
 | 12 | My Heroes | Comic book | POW! BAM! ZAP! and a wall of superheroes |
 | 13 | Kudos | Love | Mentors and friends |
@@ -56,6 +58,7 @@ blueprint, hacker terminal, WordArt typography, MS Paint palette, vaporwave do's
 - **56K mode:** a toggle in the Navigator status bar and the footer hides the decorative GIFs (and skips downloading them) for slow connections or anyone who wants a calmer page. Only the GIFs that carry meaning stay. The choice is remembered in that browser.
 - **"Come back!" tab title:** switch to another tab and the title changes to "★ Come back to Cabz's World! ★".
 - **Blinking favicon:** the `</>` tab icon cycles through neon colors, drawn on a canvas from the regular favicon.
+- **TV remote:** the Cabz Network TV flips between four channels with a burst of static. Without JavaScript every channel simply shows, stacked.
 - **Cheat Codes zone (Konami code):** type ↑ ↑ ↓ ↓ ← → ← → B A anywhere on the site (or press it on the on-screen NES-style controller, which works on phones) for a cheat banner and a GIF storm. The code lights up as you enter it.
 - **GeoCities 404 page:** "This page has moved to a new neighborhood!" with a blue-screen error message, a "Did you mean…?" guess based on the broken URL, and a directory of neighborhoods.
 - **Link previews:** Open Graph / Twitter card image (`assets/og.png`) for nice previews when the link is shared.
@@ -112,7 +115,7 @@ GitHub Pages serves the `main` branch from the repository root. Every push to `m
 ### A note on the GIFs
 
 They're anonymous fan graphics rescued from GeoCities. Some show characters owned by others (superheroes,
-Star Wars, Back to the Future, Calvin and Hobbes, Cartoon Network cartoons), the same way they did on fan homepages in the 90s. They're
+Star Wars, Back to the Future, Calvin and Hobbes, Cartoon Network cartoons, anime, Nintendo and Pokémon), the same way they did on fan homepages in the 90s. They're
 here as a tribute to the old web. If one is yours, or you'd like it credited or removed, open an issue.
 
 ---
