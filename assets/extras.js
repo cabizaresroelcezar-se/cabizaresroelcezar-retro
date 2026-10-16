@@ -1,4 +1,4 @@
-/* Extras: dial-up modem entrance, idle screensaver, Konami code, tab title, 56K lite mode, secret word, blinking favicon. */
+/* Extras: dial-up modem entrance, idle screensaver, Konami code, tab title, 56K lite mode, secret word, blinking favicon, auto-update. */
 (function () {
   "use strict";
 
@@ -339,4 +339,38 @@
     };
     base.src = icon.getAttribute("href");
   }
+
+  /* ==========================================================
+     8. AUTO-UPDATE for home-screen / long-open copies
+     When the page opens or comes back to the front, ask the server
+     for this page's Last-Modified date. If it's newer than the copy
+     on screen, refresh the cached CSS/JS and reload. No build step:
+     GitHub Pages already sends the date.
+     ========================================================== */
+  (function () {
+    if (!window.fetch) return;
+    var shown = Date.parse(document.lastModified), lastCheck = 0;
+    if (isNaN(shown)) return;
+    function check() {
+      var now = Date.now();
+      if (now - lastCheck < 60000) return;
+      lastCheck = now;
+      var url = location.href.split("#")[0];
+      fetch(url, { method: "HEAD", cache: "no-store" }).then(function (r) {
+        var live = Date.parse(r.headers.get("Last-Modified"));
+        if (!(live > shown + 1000)) return;
+        var key = "cabz-update-" + live;
+        try { if (sessionStorage.getItem(key)) return; sessionStorage.setItem(key, "1"); } catch (e) {}
+        var files = [].map.call(document.querySelectorAll('link[rel="stylesheet"][href^="assets/"], script[src^="assets/"]'), function (el) {
+          return el.getAttribute("href") || el.getAttribute("src");
+        });
+        files.push(url);
+        return Promise.all(files.map(function (f) { return fetch(f, { cache: "reload" }).catch(function () {}); }))
+          .then(function () { location.reload(); });
+      }).catch(function () {});
+    }
+    check();
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) check(); });
+    window.addEventListener("pageshow", function (e) { if (e.persisted) check(); });
+  })();
 })();
