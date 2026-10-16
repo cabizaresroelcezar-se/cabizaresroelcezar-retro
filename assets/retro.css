@@ -1081,7 +1081,7 @@ html.nav-open { overflow: hidden; }
 .knd-file span { background: #00ff66; color: #000; padding: 0 6px; margin-right: 6px; }
 .knd-file small { display: block; color: #ff0; font-size: 18px; }
 .cn-foot { text-align: center; font: 22px var(--pixel); margin: 14px 0 0; letter-spacing: 1px; }
-html.lite .cn-guide li img { display: block !important; }
+html.lite .cn-guide li img, html.lite .jolen img { display: block !important; }
 
 /* ---------- Cabz Network: TV remote and extra channels ---------- */
 .cn-tv { position: relative; }
@@ -1101,6 +1101,19 @@ html.lite .cn-guide li img { display: block !important; }
 .ph-show.sine b { color: #ffe600; }
 .ph-show.hiraya { background: linear-gradient(#7a2bd1, #3b0f75); }
 .ph-show.hiraya b { color: #ffb3f0; }
+.jack { border: 3px solid #000; border-radius: 6px; padding: 16px 12px; text-align: center; color: #fff;
+  background: radial-gradient(ellipse at 50% 0%, #c8102e 0%, #5a0010 55%, #120004 100%); }
+.jack-logo { display: inline-flex; align-items: baseline; gap: 6px; margin: 0 0 12px; padding: 4px 16px; background: #000; border: 3px solid #fff; border-radius: 40px; box-shadow: 0 0 18px #ff2d2d; }
+.jack-logo b { font: italic 400 42px/1 "Arial Black", Impact, sans-serif; color: #fff; letter-spacing: -1px; }
+.jack-logo span { font: 400 22px/1 "Arial Black", Impact, sans-serif; color: #ff2d2d; }
+.jack-card { display: flex; gap: 14px; align-items: center; max-width: 560px; margin: 0 auto; background: #000c; border: 3px solid #ffd400; padding: 10px; text-align: left; }
+.jack-card img { width: 190px; height: auto; flex: none; border: 2px solid #fff; }
+.jack-card b { font: 400 40px/1 "Arial Black", Impact, sans-serif; color: #ffd400; text-shadow: 3px 3px 0 #c8102e; letter-spacing: 2px; }
+.jack-card p { margin: 6px 0 0; font-size: 16px; }
+.jack-quote { font: 20px var(--pixel); color: #ff6b6b; }
+.jack-row { display: flex; justify-content: center; align-items: center; gap: 18px; margin-top: 12px; }
+.jack-row img { height: 64px; width: auto; }
+@media (max-width: 480px) { .jack-card { flex-direction: column; text-align: center; } .jack-card img { width: 100%; max-width: 240px; } .jack-logo b { font-size: 34px; } .remote { gap: 4px; padding: 8px; flex-wrap: nowrap; } .remote-ir { display: none; } .rbtn { padding: 0 6px; font-size: 13px; letter-spacing: 0; } }
 .s23 { position: relative; overflow: hidden; border: 3px solid #000; border-radius: 6px; background: #000; color: #fff; text-align: center; padding: 26px 12px; min-height: 230px; }
 .s23-static { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .28; }
 .s23 p { position: relative; margin: 0; }
@@ -1172,7 +1185,7 @@ html.lite .cn-guide li img { display: block !important; }
 .shelf { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px 12px; padding: 10px; background: #fff7e6; border: 4px solid #2b1600; }
 @media (max-width: 760px) { .shelf { grid-template-columns: repeat(2, 1fr); } }
 .toy { margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; border-bottom: 14px solid #8b5a2b; box-shadow: 0 6px 0 #5e3a17; padding-bottom: 4px; }
-.toy > img, .toy .tazo-stack, .toy .tex-fan { height: 120px; }
+.toy > img, .toy .tazo-stack { height: 120px; }
 .toy > img { width: auto; max-width: 100%; object-fit: contain; }
 .toy > img.toy-photo { width: 150px; height: auto; max-height: 125px; border: 3px solid #2b1600; transform: rotate(-3deg); box-shadow: 4px 4px 0 #2b1600; }
 .toy figcaption { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 6px; }
@@ -1189,12 +1202,6 @@ html.lite .cn-guide li img { display: block !important; }
 .jolen img:nth-child(3) { left: 88px; top: 60px; } .jolen img:nth-child(4) { left: 26px; top: 24px; }
 .jolen img:nth-child(5) { left: 68px; top: 22px; }
 .toy .jolen { height: 120px; }
-.tex-fan { position: relative; width: 120px; }
-.tex-fan i { position: absolute; left: 34px; top: 10px; width: 56px; height: 84px; background: #fff; border: 3px solid #2b1600; border-radius: 4px; display: grid; place-items: center; font: 400 18px "Arial Black", Impact, sans-serif; font-style: normal; color: #d62d20;
-  background-image: repeating-linear-gradient(45deg, #ffe600 0 6px, #fff 6px 12px); transform-origin: 50% 100%; }
-.tex-fan i:nth-child(1) { transform: rotate(-18deg); }
-.tex-fan i:nth-child(2) { transform: rotate(0deg); background-image: repeating-linear-gradient(45deg, #7fd4ff 0 6px, #fff 6px 12px); }
-.tex-fan i:nth-child(3) { transform: rotate(18deg); background-image: repeating-linear-gradient(45deg, #ff9ecf 0 6px, #fff 6px 12px); }
 
 /* ---------- MY HEROES: new recruits ---------- */
 .recruits { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 22px; }
