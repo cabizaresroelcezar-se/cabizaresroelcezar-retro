@@ -19,7 +19,7 @@ The homepage is a stack of full-width "neighborhoods," each with its own theme a
 
 | # | Zone | Theme | What's there |
 |---|------|-------|--------------|
-| 1 | Entrance | Space | Glowing CABZ logo, the big wavy **Cabz's World** title, "under construction" sign, IE 4 / Netscape 4 entrances |
+| 1 | Entrance | Space | "WELCOME TO" over the big wavy **Cabz's World** title, then the glowing CABZ logo above my name, "under construction" sign, IE 4 / Netscape 4 entrances |
 | 2 | Navigator | Cyber | Win95 "Cabzscape Navigator" window used as the site menu |
 | 3 | About | Sky | About me, résumé download |
 | 4 | My Interests | Vaporwave | Striped sunset, scrolling neon grid, palm trees and dolphins |

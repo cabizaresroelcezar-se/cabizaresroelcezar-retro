@@ -271,7 +271,9 @@ h2 { font-size: 34px; margin: 0 0 12px; }
    ========================================================== */
 .entrance { text-align: center; }
 .entrance .welcome { font-family: var(--comic); font-size: 20px; color: var(--yellow); margin: 6px 0; }
-.entrance .logo { width: clamp(150px, 30vw, 230px); display: block; margin: 0 auto; filter: drop-shadow(0 0 10px #0ff8); animation: hover 3s ease-in-out infinite alternate; }
+.entrance .welcome-to { margin: 14px 0 0; }
+.entrance .welcome-to img { width: clamp(200px, 60vw, 283px); height: auto; filter: drop-shadow(0 0 6px #f0f) drop-shadow(0 0 2px #0ff); }
+.entrance .logo { width: clamp(150px, 30vw, 230px); display: block; margin: 18px auto 0; filter: drop-shadow(0 0 10px #0ff8); animation: hover 3s ease-in-out infinite alternate; }
 @keyframes hover { to { transform: translateY(-8px); } }
 .entrance .name { font-family: var(--comic); font-size: clamp(20px, 4vw, 28px); margin: 4px 0 0; }
 .entrance .entrances { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin: 18px 0 6px; }
