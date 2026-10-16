@@ -1051,11 +1051,11 @@ html.nav-open { overflow: hidden; }
   color: #000;
 }
 .z-cartoon .zone-inner { background: #ffffffee; border: 4px solid #000; box-shadow: 10px 10px 0 #000; padding: 22px; }
-.cn-logo { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 0 0 10px; font: 400 clamp(34px, 8vw, 64px)/1 "Arial Black", Impact, sans-serif; }
-.cn-row { display: flex; }
-.cn-row span { display: inline-grid; place-items: center; width: 1.05em; height: 1.15em; background: #000; color: #fff; border: 3px solid #000; }
+.cn-logo { display: flex; flex-direction: column; align-items: center; margin: 0 0 10px; font: 400 clamp(28px, 7.2vw, 60px)/1 "Arial Black", Impact, sans-serif; letter-spacing: 0; }
+.cn-row { display: flex; border: .07em solid #000; background: #000; }
+.cn-row span { display: inline-grid; place-items: center; width: 1em; height: 1.08em; background: #000; color: #fff; }
 .cn-row span.w { background: #fff; color: #000; }
-.cn-row + .cn-row { margin-top: -3px; }
+.cn-row.bottom { border-top: 0; }
 .cn-sub { text-align: center; font-family: var(--comic); font-size: 20px; font-weight: 700; margin: 6px 0 16px; }
 .cn-tv { border: 4px solid #000; border-radius: 18px; background: #222; padding: 10px; box-shadow: inset 0 0 0 4px #555; }
 .cn-tv-head { display: flex; justify-content: space-between; gap: 8px; font: 22px var(--pixel); color: #0f0; padding: 0 6px 6px; letter-spacing: 2px; }
@@ -1172,7 +1172,7 @@ html.lite .cn-guide li img, html.lite .jolen img { display: block !important; }
 
 /* ---------- TOY BOX (sari-sari store shelf) ---------- */
 .z-toys {
-  background: #e0f4ff url("gifs/bg-pastel-stars.gif");
+  background: #3d8be0 url("gifs/bg-blue-clouds.gif");
   animation: bg-drift-2 14s linear infinite;
   color: #2b1600;
 }
@@ -1181,7 +1181,7 @@ html.lite .cn-guide li img, html.lite .jolen img { display: block !important; }
 .z-toys .zone-inner { text-align: center; }
 .toy-title { margin: 0; }
 .toy-title span { display: inline-block; font: 400 clamp(40px, 9vw, 72px)/1 "Arial Black", Impact, sans-serif; color: #fff; background: #d62d20; border: 4px solid #2b1600; padding: 6px 22px; box-shadow: 8px 8px 0 #2b1600; transform: rotate(-2deg); }
-.toy-sub { font: 700 20px var(--comic); margin: 18px 0 14px; }
+.toy-sub { width: fit-content; font: 700 20px var(--comic); margin: 18px auto 14px; background: #fff; border: 3px solid #2b1600; padding: 2px 14px; border-radius: 20px; }
 .shelf { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px 12px; padding: 10px; background: #fff7e6; border: 4px solid #2b1600; }
 @media (max-width: 760px) { .shelf { grid-template-columns: repeat(2, 1fr); } }
 .toy { margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; border-bottom: 14px solid #8b5a2b; box-shadow: 0 6px 0 #5e3a17; padding-bottom: 4px; }
@@ -1203,19 +1203,6 @@ html.lite .cn-guide li img, html.lite .jolen img { display: block !important; }
 .jolen img:nth-child(5) { left: 68px; top: 22px; }
 .toy .jolen { height: 120px; }
 
-/* ---------- MY HEROES: new recruits ---------- */
-.recruits { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 22px; }
-.recruit-head { flex: 0 0 100%; margin: 0 0 4px; text-align: center; }
-.recruit-head span { display: inline-block; background: #ffe600; border: 3px solid #000; box-shadow: 4px 4px 0 #000; font: 400 24px/1.2 "Bangers", Impact, sans-serif; letter-spacing: 2px; padding: 2px 14px; transform: rotate(-2deg); }
-.recruit { margin: 0; width: 140px; background: #fff; border: 3px solid #000; box-shadow: 5px 5px 0 #000; display: flex; flex-direction: column; }
-.recruit:nth-child(odd) { transform: rotate(1.5deg); }
-.recruit:nth-child(even) { transform: rotate(-1.5deg); }
-.recruit-art { height: 130px; display: grid; place-items: center; overflow: hidden; border-bottom: 3px solid #000;
-  background: radial-gradient(circle, #fff 0 18%, transparent 19%) 0 0 / 14px 14px, #ffdd00; }
-.recruit-art img { max-height: 124px; max-width: 132px; width: auto; height: auto; }
-.recruit figcaption { padding: 6px 4px 8px; text-align: center; color: #000; }
-.recruit b { display: block; font: 400 20px/1.05 "Bangers", Impact, sans-serif; letter-spacing: 1px; }
-.recruit span { display: block; font: 700 13px var(--comic); color: #c00; }
 
 /* ---------- MYX PLAYLIST '05-'06 ---------- */
 .z-myx {
@@ -1241,18 +1228,23 @@ html.lite .cn-guide li img, html.lite .jolen img { display: block !important; }
 .myx-tick span { display: inline-block; padding-left: 100%; animation: myx-tick 60s linear infinite; }
 @keyframes myx-tick { to { transform: translateX(-100%); } }
 .myx-list { list-style: none; margin: 0 auto; padding: 0; max-width: 640px; text-align: left; counter-reset: none; }
-.myx-list li { display: grid; grid-template-columns: 54px 1fr auto 44px; align-items: center; gap: 10px; padding: 8px 10px; border-bottom: 1px solid #333; background: #111c; }
+.myx-list li { display: grid; grid-template-columns: 54px 1fr 44px; align-items: center; gap: 10px; padding: 8px 10px; border-bottom: 1px solid #333; background: #111c; }
 .myx-list li:nth-child(odd) { background: #1b1b1bcc; }
 .myx-list li:hover { background: #2a1a00; }
 .rank { font: 400 30px/1 "Arial Black", Impact, sans-serif; color: #ffb000; }
 .myx-list li:nth-child(-n+3) .rank { color: #ffe600; text-shadow: 0 0 10px #ff8a00; }
 .song { font-size: 15px; color: #bbb; }
 .song b { display: block; font: 700 19px/1.2 var(--comic); color: #fff; }
-.yr { font: 18px var(--pixel); color: #ff8a00; }
 .play { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: #ff8a00; color: #000; text-decoration: none; font-size: 16px; border: 2px solid #ffe600; }
 .play:hover, .play:focus-visible { background: #ffe600; outline: none; box-shadow: 0 0 12px #ffe600; }
 .myx-note { font-size: 14px; color: #999; margin: 12px auto 0; max-width: 640px; }
-@media (max-width: 480px) { .myx-list li { grid-template-columns: 40px 1fr 40px; } .yr { display: none; } .rank { font-size: 24px; } }
+@media (max-width: 480px) { .myx-list li { grid-template-columns: 40px 1fr 40px; } .rank { font-size: 24px; } }
+.myx-player { max-width: 640px; margin: 0 auto 14px; }
+.myx-player .myx-now { margin: 0; }
+.myx-embed { min-height: 0; background: #000; }
+.myx-embed iframe { display: block; width: 100%; border: 0; }
+.myx-list li.on { background: #3a2300; box-shadow: inset 4px 0 0 #ffe600; }
+.myx-list li.on .play { background: #ffe600; }
 @media (prefers-reduced-motion: reduce) { .z-myx, .eq i, .myx-tick span { animation: none; } .eq i { height: 30px; } .myx-tick span { padding-left: 0; } }
 
 /* ---------- 56K "lite" mode: only GIFs that carry meaning stay ---------- */

@@ -186,3 +186,51 @@
   });
   tune("ch-cn", false);
 })();
+
+/* Myx Daily Top 10 player: plays the chart in-page with Spotify's iFrame API (no new tab). */
+(function () {
+  "use strict";
+  var list = document.querySelector(".myx-list");
+  var host = document.getElementById("myx-embed");
+  if (!list || !host) return;
+  var rows = list.querySelectorAll("li[data-uri]");
+  var nowEl = document.getElementById("myx-now");
+  var controller = null, pending = null, apiLoading = false;
+
+  function label(li) { var s = li.querySelector(".song"); return s.querySelector("b").textContent + " · " + s.lastChild.textContent; }
+  function mark(li) {
+    rows.forEach(function (r) { r.classList.toggle("on", r === li); });
+    nowEl.textContent = label(li);
+  }
+  function fallback(li) { // no API: drop in a plain embed for that track
+    var id = li.getAttribute("data-uri").split(":").pop();
+    host.innerHTML = '<iframe title="Spotify player" src="https://open.spotify.com/embed/track/' + id + '?utm_source=generator&theme=0" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
+  }
+  function play(li) {
+    mark(li);
+    var uri = li.getAttribute("data-uri");
+    if (controller) { controller.loadUri(uri); controller.play(); return; }
+    pending = li;
+    if (apiLoading) return;
+    apiLoading = true;
+    window.onSpotifyIframeApiReady = function (IFrameAPI) {
+      var el = document.createElement("div");
+      host.appendChild(el);
+      IFrameAPI.createController(el, { uri: pending.getAttribute("data-uri"), width: "100%", height: 152 }, function (c) {
+        controller = c;
+        c.addListener("ready", function () { c.play(); });
+      });
+    };
+    var s = document.createElement("script");
+    s.src = "https://open.spotify.com/embed/iframe-api/v1";
+    s.async = true;
+    s.onerror = function () { apiLoading = false; fallback(pending); };
+    document.head.appendChild(s);
+  }
+  rows.forEach(function (li) {
+    li.querySelector(".play").addEventListener("click", function (e) {
+      e.preventDefault(); // the link to open.spotify.com is only the no-JS fallback
+      play(li);
+    });
+  });
+})();
