@@ -729,6 +729,20 @@
     <p class="cn-sub">Grab the remote and flip through the channels I grew up on. Don't fight over it.</p>
     <div class="cn-tv" data-tv>
       <div class="cn-tv-head"><span class="cn-ch-name">📺 CARTOON NETWORK</span><span class="cn-day">SATURDAY</span><span class="blink">● LIVE</span></div>
+      <div class="cn-screen" id="ch-abs" data-ch="abs" data-name="📺 CHANNEL 2" data-day="WEEKDAY AFTERNOON">
+        <div class="ph-shows">
+          <div class="ph-show sine"><img class="gif" src="assets/gifs/sci-beaker.gif" alt="A bubbling science beaker" width="60" height="100" loading="lazy"><b>Sineskwela</b><p>Science class, but on TV. Way better than the real one.</p></div>
+          <div class="ph-show hiraya"><img class="gif" src="assets/gifs/fairy.gif" alt="A sparkling fairy" width="105" height="103" loading="lazy"><b>Hiraya Manawari</b><p>Fairy tales, magic, and a lesson at the end of every episode.</p></div>
+        </div>
+      </div>
+      <div class="cn-screen" id="ch-s23" data-ch="s23" data-name="📺 STUDIO 23" data-day="ANYTIME">
+        <div class="s23">
+          <img class="gif s23-static" src="assets/gifs/tv-static.gif" alt="" width="131" height="106" loading="lazy">
+          <p class="s23-logo" aria-label="Studio 23"><span>STUDIO</span><b>23</b></p>
+          <figure class="s23-show"><img src="assets/img/barkada-trip.jpg" alt="Barkada Trip title card: bald Bok giving a thumbs up in front of the barkada, with Malas the cat and Aries the tarsier" width="443" height="337" loading="lazy"><figcaption><b>Barkada Trip</b> Bok (a.k.a. Kalbo) and the barkada, in two-minute shorts.</figcaption></figure>
+          <p class="s23-next">Next on Cabz's World: <a href="#anime">Anime Hour ▼</a></p>
+        </div>
+      </div>
       <div class="cn-screen" id="ch-cn" data-ch="cn" data-name="📺 CARTOON NETWORK" data-day="SATURDAY">
         <ol class="cn-guide">
           <li><span class="cn-time">7:00<small>AM</small></span><img class="gif" src="assets/gifs/cn-dexter-run.gif" alt="Dexter" width="130" height="112" loading="lazy"><b>Dexter's Laboratory</b></li>
@@ -746,20 +760,6 @@
           <div><b>Art Attack</b><p>Neil Buchanan, PVA glue, and a giant masterpiece made out of stuff on the floor. Where it all started for this designer.</p><p class="flip-try">Try this at home! (Ask a grown-up first.)</p></div>
         </div>
       </div>
-      <div class="cn-screen" id="ch-abs" data-ch="abs" data-name="📺 CHANNEL 2" data-day="WEEKDAY AFTERNOON">
-        <div class="ph-shows">
-          <div class="ph-show sine"><img class="gif" src="assets/gifs/sci-beaker.gif" alt="A bubbling science beaker" width="60" height="100" loading="lazy"><b>Sineskwela</b><p>Science class, but on TV. Way better than the real one.</p></div>
-          <div class="ph-show hiraya"><img class="gif" src="assets/gifs/fairy.gif" alt="A sparkling fairy" width="105" height="103" loading="lazy"><b>Hiraya Manawari</b><p>Fairy tales, magic, and a lesson at the end of every episode.</p></div>
-        </div>
-      </div>
-      <div class="cn-screen" id="ch-s23" data-ch="s23" data-name="📺 STUDIO 23" data-day="ANYTIME">
-        <div class="s23">
-          <img class="gif s23-static" src="assets/gifs/tv-static.gif" alt="" width="131" height="106" loading="lazy">
-          <p class="s23-logo" aria-label="Studio 23"><span>STUDIO</span><b>23</b></p>
-          <figure class="s23-show"><img src="assets/img/barkada-trip.jpg" alt="Barkada Trip title card: bald Bok giving a thumbs up in front of the barkada, with Malas the cat and Aries the tarsier" width="443" height="337" loading="lazy"><figcaption><b>Barkada Trip</b> Bok (a.k.a. Kalbo) and the barkada, in two-minute shorts.</figcaption></figure>
-          <p class="s23-next">Next on Cabz's World: <a href="#anime">Anime Hour ▼</a></p>
-        </div>
-      </div>
       <div class="cn-screen" id="ch-jack" data-ch="jack" data-name="📺 JACK TV" data-day="FRIDAY NIGHT">
         <div class="jack">
           <p class="jack-logo" aria-label="Jack TV"><b>jack</b><span>TV</span></p>
@@ -774,10 +774,10 @@
     </div>
     <div class="remote" role="group" aria-label="TV remote: change the channel">
       <span class="remote-ir" aria-hidden="true"></span>
-      <button type="button" class="rbtn" aria-controls="ch-cn" aria-pressed="true">CN</button>
-      <button type="button" class="rbtn" aria-controls="ch-disney" aria-pressed="false">DISNEY</button>
       <button type="button" class="rbtn" aria-controls="ch-abs" aria-pressed="false">CH 2</button>
       <button type="button" class="rbtn" aria-controls="ch-s23" aria-pressed="false">CH 23</button>
+      <button type="button" class="rbtn" aria-controls="ch-cn" aria-pressed="true">CN</button>
+      <button type="button" class="rbtn" aria-controls="ch-disney" aria-pressed="false">DISNEY</button>
       <button type="button" class="rbtn" aria-controls="ch-jack" aria-pressed="false">JACK</button>
     </div>
     <p class="knd-file"><span>KND MISSION FILE</span> OPERATION: C.A.B.Z. <small>Cartoons Always Beat Zchoolwork</small></p>
@@ -895,11 +895,11 @@
       <li data-uri="spotify:track:5v3gtW2EjxOuCe3akCiBlD"><span class="rank">05</span><span class="song"><b>Bagsakan</b>Parokya ni Edgar ft. Francis M. &amp; Gloc-9</span><a class="play" href="https://open.spotify.com/track/5v3gtW2EjxOuCe3akCiBlD" target="_blank" rel="noopener" data-nav-skip aria-label="Play Bagsakan by Parokya ni Edgar">▶</a></li>
       <li data-uri="spotify:track:2BPFPvaPh3N675z8qYahIy"><span class="rank">06</span><span class="song"><b>Akap</b>Imago</span><a class="play" href="https://open.spotify.com/track/2BPFPvaPh3N675z8qYahIy" target="_blank" rel="noopener" data-nav-skip aria-label="Play Akap by Imago">▶</a></li>
       <li data-uri="spotify:track:50DeHtxAMKFU3PKkrR6xKX"><span class="rank">07</span><span class="song"><b>Makita Kang Muli</b>Sugarfree</span><a class="play" href="https://open.spotify.com/track/50DeHtxAMKFU3PKkrR6xKX" target="_blank" rel="noopener" data-nav-skip aria-label="Play Makita Kang Muli by Sugarfree">▶</a></li>
-      <li data-uri="spotify:track:5zMR44ZH4KVZj4FlhTj3SE"><span class="rank">08</span><span class="song"><b>Magbalik</b>Callalily</span><a class="play" href="https://open.spotify.com/track/5zMR44ZH4KVZj4FlhTj3SE" target="_blank" rel="noopener" data-nav-skip aria-label="Play Magbalik by Callalily">▶</a></li>
-      <li data-uri="spotify:track:5ueVF4xIdaCLeklZTL5mm2"><span class="rank">09</span><span class="song"><b>Sunday Driving</b>Rivermaya (Rico Blanco)</span><a class="play" href="https://open.spotify.com/track/5ueVF4xIdaCLeklZTL5mm2" target="_blank" rel="noopener" data-nav-skip aria-label="Play Sunday Driving by Rivermaya">▶</a></li>
+      <li data-uri="spotify:track:69u8qQcaA3o0A7Ko87juqp"><span class="rank">08</span><span class="song"><b>Hanggang Kailan (Umuwi Ka Na Baby)</b>Orange &amp; Lemons</span><a class="play" href="https://open.spotify.com/track/69u8qQcaA3o0A7Ko87juqp" target="_blank" rel="noopener" data-nav-skip aria-label="Play Hanggang Kailan (Umuwi Ka Na Baby) by Orange & Lemons">▶</a></li>
+      <li data-uri="spotify:track:4mOjjXKDOR1sel6APULUaN"><span class="rank">09</span><span class="song"><b>Huwag Na Huwag Mong Sasabihin</b>Kitchie Nadal</span><a class="play" href="https://open.spotify.com/track/4mOjjXKDOR1sel6APULUaN" target="_blank" rel="noopener" data-nav-skip aria-label="Play Huwag Na Huwag Mong Sasabihin by Kitchie Nadal">▶</a></li>
       <li data-uri="spotify:track:6Srj2NoAIGgBFORh6r5Whs"><span class="rank">10</span><span class="song"><b>Burnout</b>Sugarfree</span><a class="play" href="https://open.spotify.com/track/6Srj2NoAIGgBFORh6r5Whs" target="_blank" rel="noopener" data-nav-skip aria-label="Play Burnout by Sugarfree">▶</a></li>
     </ol>
-    <p class="myx-note">Songs play right here through Spotify: a 30-second preview, or the full track if you're logged in to Spotify in this browser. Rico Blanco fronted Rivermaya and wrote "You'll Be Safe Here" and "Sunday Driving"; the first one plays his own re-recording, since the original isn't on Spotify.</p>
+    <p class="myx-note">Songs play right here through Spotify: a 30-second preview, or the full track if you're logged in to Spotify in this browser. Rico Blanco fronted Rivermaya and wrote "You'll Be Safe Here"; it plays his own re-recording, since the Rivermaya original isn't on Spotify.</p>
   </div>
   <div class="collage gif-row" aria-hidden="true">
     <img class="gif" src="assets/gifs/guitar-pink.gif" alt="" width="86" height="78" loading="lazy">

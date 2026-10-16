@@ -33,7 +33,7 @@ The homepage is a stack of full-width "neighborhoods," each with its own theme a
 | 10½ | Cabztoon Network | Cartoon Network checkerboard | A TV with a working remote. CN: Saturday mornings 2001–2002 (Dexter, Powerpuff Girls, Johnny Bravo, Courage, Ed Edd n Eddy, my fave Codename: Kids Next Door, Billy & Mandy) plus a KND mission file. Disney Channel: Art Attack. Channel 2: Sineskwela and Hiraya Manawari. Channel 23: Studio 23's Barkada Trip, starring Bok (a.k.a. Kalbo) and the barkada. Jack TV: WWE |
 | 10¾ | Anime Hour | Drifting winged-hearts GIF tile | Ghost Fighter, Slam Dunk, Dragon Ball Z, Pokémon, Yu-Gi-Oh! and Voltes V, each with its catchphrase |
 | 10⅞ | Toy Box | Drifting blue-clouds GIF tile, sari-sari store shelf | Tamagotchi, jolen, Game Boy Color/Advance, Beyblade, Crush Gear, Pokémon Tazos and teks, with price-tag captions |
-| 10⅞+ | Myx Daily Top 10 | Music-channel black | Ten OPM hits from 2005–2006 (Hale, Cueshé, Rivermaya / Rico Blanco, Kamikazee, Parokya ni Edgar, Imago, Sugarfree, Callalily) that play right on the page through Spotify |
+| 10⅞+ | Myx Daily Top 10 | Music-channel black | Ten OPM hits from 2005–2006 (Hale, Cueshé, Rivermaya / Rico Blanco, Kamikazee, Parokya ni Edgar, Imago, Sugarfree, Orange & Lemons, Kitchie Nadal) that play right on the page through Spotify |
 | 11 | The Dark Side | Spooky | Statement and a link to the branding study |
 | 12 | My Heroes | Comic book | POW! BAM! ZAP! and a wall of superheroes, now with The Flash, Green Lantern, Iron Man, Captain America and Thor |
 | 13 | Kudos | Love | Mentors and friends |
@@ -63,7 +63,7 @@ blueprint, hacker terminal, WordArt typography, MS Paint palette, vaporwave do's
 - **56K mode:** a toggle in the Navigator status bar and the footer hides the decorative GIFs (and skips downloading them) for slow connections or anyone who wants a calmer page. Only the GIFs that carry meaning stay. The choice is remembered in that browser.
 - **"Come back!" tab title:** switch to another tab and the title changes to "★ Come back to Cabz's World! ★".
 - **Blinking favicon:** the `</>` tab icon cycles through neon colors, drawn on a canvas from the regular favicon.
-- **TV remote:** the Cabz Network TV flips between five channels with a burst of static. Without JavaScript every channel simply shows, stacked.
+- **TV remote:** the Cabztoon Network TV flips between five channels, ordered like a Pinoy TV (free channels 2 and 23 first, then cable: CN, Disney, Jack TV) with a burst of static. Without JavaScript every channel simply shows, stacked.
 - **Myx player:** each ▶ in the Daily Top 10 loads the song into one embedded Spotify player using Spotify's iFrame API, so nothing opens in a new tab. Logged-out visitors hear Spotify's 30-second preview; anyone logged in to Spotify in that browser hears the full track.
 - **Cheat Codes zone (Konami code):** type ↑ ↑ ↓ ↓ ← → ← → B A anywhere on the site (or press it on the on-screen NES-style controller, which works on phones) for a cheat banner and a GIF storm. The code lights up as you enter it.
 - **GeoCities 404 page:** "This page has moved to a new neighborhood!" with a blue-screen error message, a "Did you mean…?" guess based on the broken URL, and a directory of neighborhoods.
