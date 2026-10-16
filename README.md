@@ -68,7 +68,7 @@ blueprint, hacker terminal, WordArt typography, MS Paint palette, vaporwave do's
 - **Auto-update:** home-screen shortcuts and tabs left open pick up new deploys on their own. When the page opens or comes back to the front, it compares its own date with the date GitHub Pages reports for the live page. If the live one is newer, it refreshes the cached CSS and JS and reloads once. No service worker and no build step.
 - **Cheat Codes zone (Konami code):** type ↑ ↑ ↓ ↓ ← → ← → B A anywhere on the site (or press it on the on-screen NES-style controller, which works on phones) for a cheat banner and a GIF storm. The code lights up as you enter it.
 - **GeoCities 404 page:** "This page has moved to a new neighborhood!" with a blue-screen error message, a "Did you mean…?" guess based on the broken URL, and a directory of neighborhoods.
-- **Link previews:** Open Graph / Twitter card image (`assets/og.png`) for nice previews when the link is shared.
+- **Link previews:** Open Graph and Twitter/X card tags on the homepage and branding page, with a 1200×630 preview image (`assets/og-card.png`) that matches the entrance: "Welcome to", Cabz's World, the logo and my name. Shows up on Facebook, Messenger, LinkedIn, X, Viber, Discord and Slack.
 - **Guestbook:** a working contact form (via [FormSubmit](https://formsubmit.co/)).
 - **Visitor counter** (decorative, it just ticks up), marquees, blinking text, WordArt and 88×31 badges.
 - **Big-screen scaling:** on screens 1440px and wider, every section renders 10% larger (CSS `zoom`), so text is readable without browser zoom. Pop-up windows and fixed widgets keep their size.
@@ -86,7 +86,7 @@ assets/cabzscape.js   Cabzscape Navigator window + random neon CRT colors
 assets/geocities.js   GIF gutter scatter, time circuits clock, CabzAmp soundtrack jukebox
 assets/retro.js       counter, guestbook form, fairy-dust cursor trail, chiptune player
 assets/extras.js      dial-up modem entrance, screensaver, Konami code, secret word, 56K mode, tab title, favicon
-assets/og.png         1200×630 social share preview image
+assets/og-card.png    1200×630 social share preview image
 404.html              GeoCities-style "page not found"
 assets/gifs/          archived GeoCities GIFs (see CREDITS.md)
 assets/cursors/       wand + hand SVG cursors
