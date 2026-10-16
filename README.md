@@ -30,7 +30,7 @@ The homepage is a stack of full-width "neighborhoods," each with its own theme a
 | 8½ | Cheat Codes | 8-bit | The Konami code with live progress and an on-screen controller |
 | 9 | Side Quests | Fire | thy keycabz, Cryptobuds, Yo-Bi, and the CabzAmp chiptune player |
 | 10 | Movie Night | Star Wars + Back to the Future | Opening crawl ("Episode IV: A New Homepage"), time circuits (destination MAR 20 2012, PRESENT TIME shows your last visit), 88 MPH |
-| 10½ | Cabz Network | Cartoon Network checkerboard | Saturday mornings, 2001–2002: a TV guide (Dexter, Powerpuff Girls, Johnny Bravo, Courage, Ed Edd n Eddy, my fave Codename: Kids Next Door, Billy & Mandy), a KND mission file, with characters spilling into the margins |
+| 10½ | Cabz Network | Cartoon Network checkerboard | Saturday mornings, 2001–2002: a TV guide (Dexter, Powerpuff Girls, Johnny Bravo, Courage, Ed Edd n Eddy, my fave Codename: Kids Next Door, Billy & Mandy), a KND mission file, a Disney Channel "channel flip" to Art Attack, with characters spilling into the margins |
 | 11 | The Dark Side | Spooky | Statement and a link to the branding study |
 | 12 | My Heroes | Comic book | POW! BAM! ZAP! and a wall of superheroes |
 | 13 | Kudos | Love | Mentors and friends |
