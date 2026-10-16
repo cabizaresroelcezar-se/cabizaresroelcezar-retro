@@ -8,8 +8,6 @@ Original creators are mostly unknown; they're kept here as a tribute to the old 
 | File | Size | Archived source | Found on |
 |---|---|---|---|
 | alien.gif | 54×54 | https://web.archive.org/web/20060116194640if_/http://www.geocities.com/ReadingNook/book-pics/scifi-alien.gif | https://web.archive.org/web/20090830064146/http://geocities.com/ReadingNook/scifi/st-tng-a12.html |
-| an-crush-car.gif | 91×55 | https://web.archive.org/web/20090831151903if_/http://geocities.com/weightyissues/carmove.gif | https://web.archive.org/web/20090902194438/http://geocities.com/weightyissues/lowfat.html |
-| an-crush-gear.gif | 83×75 | https://web.archive.org/web/20091019212252if_/http://www.geocities.com/recallventures/Gears.gif | https://web.archive.org/web/20091022125518/http://geocities.com/recallventures/recall2.html |
 | an-dbz-logo.gif | 100×60 | https://web.archive.org/web/20090831050336if_/http://geocities.com/fefreitas2000/dragonballz.gif | https://web.archive.org/web/20091026234410/http://geocities.com/fefreitas2000/ |
 | an-dunk.gif | 136×163 | https://web.archive.org/web/20091022064806if_/http://www.geocities.com/myangelchristopher11/basketballslamdunk.gif | https://web.archive.org/web/20091022100228/http://geocities.com/myangelchristopher11/malorie2.html |
 | an-gohan.gif | 74×88 | https://web.archive.org/web/20020323181957if_/http://geocities.com:80/gokudbzz/gohanp.gif | https://web.archive.org/web/20090902124840/http://geocities.com/gokudbzz/ |

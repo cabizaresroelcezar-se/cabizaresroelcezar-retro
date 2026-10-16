@@ -30,9 +30,9 @@ The homepage is a stack of full-width "neighborhoods," each with its own theme a
 | 8½ | Cheat Codes | 8-bit | The Konami code with live progress and an on-screen controller |
 | 9 | Side Quests | Fire | thy keycabz, Cryptobuds, Yo-Bi, and the CabzAmp chiptune player |
 | 10 | Movie Night | Star Wars + Back to the Future | Opening crawl ("Episode IV: A New Homepage"), time circuits (destination MAR 20 2012, PRESENT TIME shows your last visit), 88 MPH |
-| 10½ | Cabz Network | Cartoon Network checkerboard | A TV with a working remote. CN: Saturday mornings 2001–2002 (Dexter, Powerpuff Girls, Johnny Bravo, Courage, Ed Edd n Eddy, my fave Codename: Kids Next Door, Billy & Mandy) plus a KND mission file. Disney Channel: Art Attack. Channel 2: Sineskwela and Hiraya Manawari. Channel 23: Studio 23, Kabarkada! |
-| 10¾ | Anime Hour | Manga speed lines | Ghost Fighter, Slam Dunk, Dragon Ball Z, Pokémon, Yu-Gi-Oh!, Voltes V and Crush Gear Turbo, each with its catchphrase |
-| 10⅞ | Toy Box | Sari-sari store shelf | Tamagotchi, jolen, Game Boy Color/Advance, Beyblade, Pokémon Tazos and tex cards, with price-tag captions |
+| 10½ | Cabz Network | Cartoon Network checkerboard | A TV with a working remote. CN: Saturday mornings 2001–2002 (Dexter, Powerpuff Girls, Johnny Bravo, Courage, Ed Edd n Eddy, my fave Codename: Kids Next Door, Billy & Mandy) plus a KND mission file. Disney Channel: Art Attack. Channel 2: Sineskwela and Hiraya Manawari. Channel 23: Studio 23's Barkada Trip, starring Bok (a.k.a. Kalbo) and the barkada |
+| 10¾ | Anime Hour | Manga speed lines | Ghost Fighter, Slam Dunk, Dragon Ball Z, Pokémon, Yu-Gi-Oh! and Voltes V, each with its catchphrase |
+| 10⅞ | Toy Box | Sari-sari store shelf | Tamagotchi, jolen, Game Boy Color/Advance, Beyblade, Crush Gear, Pokémon Tazos and tex cards, with price-tag captions |
 | 11 | The Dark Side | Spooky | Statement and a link to the branding study |
 | 12 | My Heroes | Comic book | POW! BAM! ZAP! and a wall of superheroes |
 | 13 | Kudos | Love | Mentors and friends |
@@ -49,6 +49,9 @@ blueprint, hacker terminal, WordArt typography, MS Paint palette, vaporwave do's
 - **Cabzscape Navigator 2.0:** links open in a draggable Win95 browser window with Back/Forward/Reload, a location bar and a status bar. Sites that refuse to be framed (Facebook, LinkedIn and others) get a retro preview page built from the card's content, with an "Open in New Window" button.
 - **GIFs everywhere:** 300+ archived GeoCities GIFs. On wide screens they spill into the left and right margins at random positions and tilts, re-shuffled every visit.
 - **Neon CRT logos:** gray project logos are recolored into a random neon per card, with scanlines, flicker and a glitch on hover.
+- **Photos:** the Barkada Trip title card (Studio 23 / Chibibo Toons) comes from the fan blog
+  [For Young Pinoy Audience](http://sketchpride.blogspot.com/2008/08/barkada-trip-2005.html), and the boxed Bandai Crush Gear
+  CGV-01S Garuda Eagle V is an eBay listing photo. Both are used as a nostalgic tribute, the same way as the GIFs.
 - **Soundtrack:** the CabzAmp jukebox plays "Killing in the Name" by Rage Against the Machine through the official YouTube video. Click-to-play only (explicit lyrics); there's also a Spotify link.
 - **Chiptune:** a little Web Audio "MIDI" theme in the Side Quests zone.
 - **Magic-wand cursor** with a fairy-dust star trail, plus a pixel pointing-hand cursor.

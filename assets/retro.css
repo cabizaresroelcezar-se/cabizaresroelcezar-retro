@@ -1107,7 +1107,10 @@ html.lite .cn-guide li img { display: block !important; }
 .s23-logo { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: #000; border: 4px solid #000; box-shadow: 6px 6px 0 #e4002b; padding: 6px 16px; }
 .s23-logo span { font: 400 26px/1 "Arial Black", Impact, sans-serif; letter-spacing: 3px; }
 .s23-logo b { font: 400 72px/1 "Arial Black", Impact, sans-serif; color: #e4002b; }
-.s23-tag { font: 400 44px/1.1 var(--comic); font-weight: 700; color: #ffe600; text-shadow: 3px 3px 0 #e4002b, 5px 5px 0 #000; margin-top: 14px !important; }
+.s23-show { position: relative; margin: 16px auto 0; max-width: 380px; background: #fff; color: #000; border: 4px solid #000; box-shadow: 6px 6px 0 #e4002b; transform: rotate(-1.5deg); }
+.s23-show img { display: block; width: 100%; height: auto; }
+.s23-show figcaption { padding: 6px 10px 8px; font-size: 15px; }
+.s23-show b { display: block; font: 400 24px/1.1 "Arial Black", Impact, sans-serif; color: #e4002b; }
 .s23-next { font: 22px var(--pixel); margin-top: 12px !important; }
 .s23-next a { color: #0ff; }
 .remote { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; margin: 14px auto 0; max-width: 460px; padding: 10px 16px; background: linear-gradient(#4a4a4a, #222); border: 3px solid #000; border-radius: 30px; box-shadow: 0 6px 0 #000; }
@@ -1126,7 +1129,6 @@ html.lite .cn-guide li img { display: block !important; }
   .s23-logo { gap: 6px; padding: 4px 10px; box-shadow: 4px 4px 0 #e4002b; }
   .s23-logo span { font-size: 18px; letter-spacing: 2px; }
   .s23-logo b { font-size: 50px; }
-  .s23-tag { font-size: 34px; }
 }
 
 /* ---------- ANIME HOUR ---------- */
@@ -1138,8 +1140,7 @@ html.lite .cn-guide li img { display: block !important; }
 .an-kana { margin: 0; font: 700 22px/1 sans-serif; color: #e4002b; letter-spacing: 6px; }
 .an-title { margin: 4px 0 0; font: italic 400 clamp(44px, 10vw, 84px)/1 "Arial Black", Impact, sans-serif; color: #ffe600; -webkit-text-stroke: 3px #000; text-shadow: 6px 6px 0 #e4002b, 10px 10px 0 #000; letter-spacing: 2px; }
 .an-sub { font: 700 20px var(--comic); margin: 14px 0 18px; }
-.an-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-.an-card.wide { grid-column: span 2; }
+.an-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 @media (max-width: 760px) { .an-grid { grid-template-columns: repeat(2, 1fr); } }
 .an-card { margin: 0; background: #fff; border: 4px solid #000; box-shadow: 6px 6px 0 #000; display: flex; flex-direction: column; transform: rotate(-1deg); }
 .an-card:nth-child(even) { transform: rotate(1.2deg); }
@@ -1150,12 +1151,7 @@ html.lite .cn-guide li img { display: block !important; }
 .an-card b { font: 400 22px/1.1 "Arial Black", Impact, sans-serif; }
 .an-line { position: relative; background: #fff; border: 3px solid #000; border-radius: 18px; padding: 4px 10px; font: 700 15px/1.2 var(--comic); }
 .an-card.spirit { --an: #7fd4ff; } .an-card.dunk { --an: #ff6b6b; } .an-card.dbz { --an: #ffa31a; }
-.an-card.poke { --an: #ffe600; } .an-card.ygo { --an: #c79bff; } .an-card.voltes { --an: #4d7dff; } .an-card.crush { --an: #9aff3d; }
-.crush-art { position: relative; }
-.crush-art img:first-child { position: absolute; width: 130px; opacity: .55; }
-.crush-art img:last-child { position: relative; width: 150px; filter: drop-shadow(4px 4px 0 #000); animation: crush-rev .25s steps(2) infinite alternate; }
-@keyframes crush-rev { to { transform: translateX(3px) rotate(-1deg); } }
-@media (prefers-reduced-motion: reduce) { .crush-art img:last-child { animation: none; } }
+.an-card.poke { --an: #ffe600; } .an-card.ygo { --an: #c79bff; } .an-card.voltes { --an: #4d7dff; }
 .an-card.voltes .an-art { background: #000; }
 .z-anime .gif.px { image-rendering: pixelated; }
 
@@ -1173,6 +1169,7 @@ html.lite .cn-guide li img { display: block !important; }
 .toy { margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; border-bottom: 14px solid #8b5a2b; box-shadow: 0 6px 0 #5e3a17; padding-bottom: 4px; }
 .toy > img, .toy .tazo-stack, .toy .tex-fan { height: 120px; }
 .toy > img { width: auto; max-width: 100%; object-fit: contain; }
+.toy > img.toy-photo { width: 150px; height: auto; max-height: 125px; border: 3px solid #2b1600; transform: rotate(-3deg); box-shadow: 4px 4px 0 #2b1600; }
 .toy figcaption { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 6px; }
 .toy b { font: 700 16px var(--comic); }
 .tag { position: relative; background: #ffe600; border: 2px solid #2b1600; padding: 2px 8px 2px 16px; font: 16px/1.15 var(--pixel); transform: rotate(-3deg); }
