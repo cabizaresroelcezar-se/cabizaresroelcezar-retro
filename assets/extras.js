@@ -1,4 +1,4 @@
-/* Extras: dial-up modem entrance, idle screensaver, Konami code. */
+/* Extras: dial-up modem entrance, idle screensaver, Konami code, tab title, 56K lite mode, secret word, blinking favicon. */
 (function () {
   "use strict";
 
@@ -250,5 +250,92 @@
       if (++n >= 90) clearInterval(drop);
     }, 70);
     setTimeout(function () { layer.remove(); }, 12000);
+  }
+
+  /* ==========================================================
+     4. "COME BACK!" TAB TITLE while the visitor is in another tab
+     ========================================================== */
+  var realTitle = document.title;
+  document.addEventListener("visibilitychange", function () {
+    document.title = document.hidden ? "★ Come back to Cabz's World! ★" : realTitle;
+  });
+
+  /* ==========================================================
+     5. 56K LITE MODE: hide the decorative GIFs (remembered per browser)
+     The <head> applies the saved choice before the page paints.
+     ========================================================== */
+  var root = document.documentElement;
+  var liteBtns = document.querySelectorAll("[data-lite]");
+  function syncLite() {
+    var on = root.classList.contains("lite");
+    liteBtns.forEach(function (b) {
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      b.textContent = on ? "📞 56K mode: ON (show GIFs)" : "📞 56K mode: OFF";
+      b.title = on ? "Bring all the GIFs back" : "Slow connection? Hide most of the GIFs";
+    });
+  }
+  liteBtns.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var on = root.classList.toggle("lite");
+      try { localStorage.setItem("cabz-lite", on ? "1" : "0"); } catch (e) {}
+      syncLite();
+      window.dispatchEvent(new Event("resize")); // let the GIF gutters re-measure
+    });
+  });
+  syncLite();
+
+  /* ==========================================================
+     6. SECRET WORD: type "cabz" anywhere
+     ========================================================== */
+  var typed = "";
+  document.addEventListener("keydown", function (e) {
+    if (e.target.closest && e.target.closest("input, textarea, select")) return;
+    if (!e.key || e.key.length !== 1) return;
+    typed = (typed + e.key.toLowerCase()).slice(-4);
+    if (typed === "cabz") { typed = ""; cabzMode(); }
+  });
+  function cabzMode() {
+    if (document.querySelector(".cabz-fly")) return;
+    var banner = document.createElement("div");
+    banner.className = "cheat-banner";
+    banner.setAttribute("role", "status");
+    banner.innerHTML = "★ CABZ WAS HERE ★<br><small>YOU FOUND THE SECRET WORD</small>";
+    document.body.appendChild(banner);
+    setTimeout(function () { banner.remove(); }, 3600);
+    if (reduceMotion) return;
+    var logo = document.createElement("img");
+    logo.className = "cabz-fly";
+    logo.src = "assets/img/logo.png";
+    logo.alt = "";
+    document.body.appendChild(logo);
+    root.classList.add("cabz-party");
+    setTimeout(function () { logo.remove(); root.classList.remove("cabz-party"); }, 3300);
+  }
+
+  /* ==========================================================
+     7. BLINKING FAVICON: the </> mark cycles through neon colors
+     ========================================================== */
+  var icon = document.querySelector('link[rel="icon"]');
+  if (icon && !reduceMotion) {
+    var base = new Image();
+    base.onload = function () {
+      var NEON = ["#ffffff", "#39ff14", "#00ffff", "#ff00ff", "#ffff00", "#ff6a00"];
+      var frames = NEON.map(function (c) {
+        var cv = document.createElement("canvas");
+        cv.width = cv.height = 64;
+        var g = cv.getContext("2d");
+        g.drawImage(base, 0, 0, 64, 64);
+        g.globalCompositeOperation = "multiply"; // white mark takes the color, black stays black
+        g.fillStyle = c;
+        g.fillRect(0, 0, 64, 64);
+        g.globalCompositeOperation = "destination-in"; // restore the round shape
+        g.drawImage(base, 0, 0, 64, 64);
+        try { return cv.toDataURL("image/png"); } catch (e) { return null; }
+      });
+      if (frames.some(function (f) { return !f; })) return;
+      var n = 0;
+      setInterval(function () { icon.href = frames[n = (n + 1) % frames.length]; }, 600);
+    };
+    base.src = icon.getAttribute("href");
   }
 })();

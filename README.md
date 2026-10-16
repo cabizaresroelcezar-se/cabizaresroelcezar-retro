@@ -4,7 +4,7 @@
 **Branding page:** https://cabizaresroelcezar-se.github.io/cabizaresroelcezar-retro/branding.html
 **Modern portfolio (the original):** https://cabizaresroelcezar-se.github.io/cabizaresroelcezar/ ([source](https://github.com/cabizaresroelcezar-se/cabizaresroelcezar))
 
-A GeoCities-era remake of the personal portfolio of **Roel Cezar Cabizares**, a software engineer and
+A GeoCities-era remake of the personal portfolio of **Roel Cezar Cabizares** (Cabz), a software engineer and
 front-end developer from the Philippines. It's a love letter to the internet I started exploring on:
 tiled backgrounds, animated GIFs everywhere, MIDI music, guestbooks, hit counters, and the
 "under construction" sign that never came down. Est. 1998 (give or take a couple decades).
@@ -50,6 +50,10 @@ blueprint, hacker terminal, WordArt typography, MS Paint palette, fire).
 - **Magic-wand cursor** with a fairy-dust star trail, plus a pixel pointing-hand cursor.
 - **Dial-up modem entrance:** the IE 4 / Netscape 4 entrance buttons "dial in" with a synthesized modem handshake (dial tone, DTMF, the screech) and a Win95 connection dialog. Skippable.
 - **Screensaver:** after a minute without input, a starfield warp with a bouncing, color-shifting CABZ logo takes over (mouse/desktop only).
+- **Secret word:** type `cabz` anywhere and the logo spins across the screen while the page cycles through a rainbow.
+- **56K mode:** a toggle in the Navigator status bar and the footer hides the decorative GIFs (and skips downloading them) for slow connections or anyone who wants a calmer page. Only the GIFs that carry meaning stay. The choice is remembered in that browser.
+- **"Come back!" tab title:** switch to another tab and the title changes to "★ Come back to Cabz's World! ★".
+- **Blinking favicon:** the `</>` tab icon cycles through neon colors, drawn on a canvas from the regular favicon.
 - **Cheat Codes zone (Konami code):** type ↑ ↑ ↓ ↓ ← → ← → B A anywhere on the site (or press it on the on-screen NES-style controller, which works on phones) for a cheat banner and a GIF storm. The code lights up as you enter it.
 - **GeoCities 404 page:** "This page has moved to a new neighborhood!" with a blue-screen error message.
 - **Link previews:** Open Graph / Twitter card image (`assets/og.png`) for nice previews when the link is shared.
@@ -68,7 +72,7 @@ assets/retro.css      everything visual: zones, Win95 chrome, scrollbar, CRTs, j
 assets/cabzscape.js   Cabzscape Navigator window + random neon CRT colors
 assets/geocities.js   GIF gutter scatter, time circuits clock, CabzAmp soundtrack jukebox
 assets/retro.js       counter, guestbook form, fairy-dust cursor trail, chiptune player
-assets/extras.js      dial-up modem entrance, screensaver, Konami code
+assets/extras.js      dial-up modem entrance, screensaver, Konami code, secret word, 56K mode, tab title, favicon
 assets/og.png         1200×630 social share preview image
 404.html              GeoCities-style "page not found"
 assets/gifs/          archived GeoCities GIFs (see CREDITS.md)

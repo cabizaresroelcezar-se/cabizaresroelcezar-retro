@@ -1042,3 +1042,26 @@ html.nav-open { overflow: hidden; }
   .pad-center { display: none; }
   .kc-seq span { width: 30px; height: 30px; font-size: 16px; }
 }
+
+/* ---------- 56K "lite" mode: only GIFs that carry meaning stay ---------- */
+.win-status .lite-slot { padding: 0; display: flex; }
+.lite-toggle { font: inherit; cursor: inherit; }
+.win-status .lite-toggle { flex: 1; border: 0; background: transparent; color: inherit; padding: 1px 6px; text-align: left; white-space: nowrap; }
+.win-status .lite-toggle:hover, .win-status .lite-toggle:focus-visible { background: #000080; color: #fff; outline: none; }
+.lite-toggle[aria-pressed="true"] { color: #b00; font-weight: 700; }
+.site-footer .lite-toggle[aria-pressed="true"] { color: #b00; }
+html.lite .scatter, html.lite .rail, html.lite .gif-row, html.lite .collage,
+html.lite img.gif[alt=""], html.lite .gif-rain { display: none !important; }
+html.lite .zone-inner { grid-template-columns: minmax(0, 1fr); }
+
+/* ---------- secret word: type "cabz" ---------- */
+.cabz-fly { position: fixed; top: 38vh; left: -260px; width: 220px; height: auto; z-index: 1450; pointer-events: none; filter: drop-shadow(0 0 18px #f0f) drop-shadow(0 0 6px #0ff); animation: cabz-fly 3.2s cubic-bezier(.45,.05,.55,.95) forwards; }
+@keyframes cabz-fly {
+  0% { transform: translate(0, 0) rotate(0deg) scale(.6); }
+  25% { transform: translate(30vw, -18vh) rotate(360deg) scale(1.1); }
+  50% { transform: translate(55vw, 10vh) rotate(720deg) scale(.9); }
+  75% { transform: translate(80vw, -12vh) rotate(1080deg) scale(1.2); }
+  100% { transform: translate(calc(100vw + 300px), 0) rotate(1440deg) scale(.6); }
+}
+html.cabz-party body { animation: cabz-hue 1s linear 3; }
+@keyframes cabz-hue { to { filter: hue-rotate(360deg); } }
