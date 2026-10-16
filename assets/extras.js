@@ -142,7 +142,8 @@
       function size() { W = cv.width = innerWidth; H = cv.height = innerHeight; }
       size();
       for (var i = 0; i < 260; i++) stars.push({ x: (Math.random() - 0.5) * W, y: (Math.random() - 0.5) * H, z: Math.random() * W });
-      var lx = Math.random() * (W - 160), ly = Math.random() * (H - 160), vx = 2.2, vy = 1.8, hue = 0;
+      var LW = Math.min(420, Math.max(240, W * 0.26)); // matches the CSS clamp
+      var lx = Math.random() * Math.max(0, W - LW), ly = Math.random() * Math.max(0, H - LW), vx = 2.6, vy = 2.1, hue = 0;
       function frame() {
         c2.fillStyle = "rgba(0,0,0,.35)";
         c2.fillRect(0, 0, W, H);
@@ -156,7 +157,7 @@
           c2.fillRect(px, py, r, r);
         }
         lx += vx; ly += vy;
-        var lw = logo.offsetWidth || 160, lh = logo.offsetHeight || 160;
+        var lw = logo.offsetWidth || LW, lh = logo.offsetHeight || LW;
         if (lx <= 0 || lx + lw >= W) { vx = -vx; hue = (hue + 67) % 360; }
         if (ly <= 0 || ly + lh >= H) { vy = -vy; hue = (hue + 67) % 360; }
         logo.style.transform = "translate(" + lx + "px," + ly + "px)";

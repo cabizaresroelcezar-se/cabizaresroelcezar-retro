@@ -37,7 +37,8 @@ The homepage is a stack of full-width "neighborhoods," each with its own theme a
 | 15 | Footer | Hacker matrix | Visitor counter, 88×31 badges, and Calvin |
 
 `branding.html` covers the personal branding and logo study with its own themed sections (space, Notepad,
-blueprint, hacker terminal, WordArt typography, MS Paint palette, fire).
+blueprint, hacker terminal, WordArt typography, MS Paint palette, vaporwave do's & don'ts, fire). It has a jump menu, a
+"Try it" box that previews your own text in Manrope, color swatches you click to copy, and a logo usage guide.
 
 ## Features
 
@@ -49,13 +50,13 @@ blueprint, hacker terminal, WordArt typography, MS Paint palette, fire).
 - **Chiptune:** a little Web Audio "MIDI" theme in the Side Quests zone.
 - **Magic-wand cursor** with a fairy-dust star trail, plus a pixel pointing-hand cursor.
 - **Dial-up modem entrance:** the IE 4 / Netscape 4 entrance buttons "dial in" with a synthesized modem handshake (dial tone, DTMF, the screech) and a Win95 connection dialog. Skippable.
-- **Screensaver:** after a minute without input, a starfield warp with a bouncing, color-shifting CABZ logo takes over (mouse/desktop only).
+- **Screensaver:** after a minute without input, a starfield warp with a big bouncing, color-shifting CABZ logo (DVD style) takes over (mouse/desktop only).
 - **Secret word:** type `cabz` anywhere and the logo spins across the screen while the page cycles through a rainbow.
 - **56K mode:** a toggle in the Navigator status bar and the footer hides the decorative GIFs (and skips downloading them) for slow connections or anyone who wants a calmer page. Only the GIFs that carry meaning stay. The choice is remembered in that browser.
 - **"Come back!" tab title:** switch to another tab and the title changes to "★ Come back to Cabz's World! ★".
 - **Blinking favicon:** the `</>` tab icon cycles through neon colors, drawn on a canvas from the regular favicon.
 - **Cheat Codes zone (Konami code):** type ↑ ↑ ↓ ↓ ← → ← → B A anywhere on the site (or press it on the on-screen NES-style controller, which works on phones) for a cheat banner and a GIF storm. The code lights up as you enter it.
-- **GeoCities 404 page:** "This page has moved to a new neighborhood!" with a blue-screen error message.
+- **GeoCities 404 page:** "This page has moved to a new neighborhood!" with a blue-screen error message, a "Did you mean…?" guess based on the broken URL, and a directory of neighborhoods.
 - **Link previews:** Open Graph / Twitter card image (`assets/og.png`) for nice previews when the link is shared.
 - **Guestbook:** a working contact form (via [FormSubmit](https://formsubmit.co/)).
 - **Visitor counter** (decorative, it just ticks up), marquees, blinking text, WordArt and 88×31 badges.

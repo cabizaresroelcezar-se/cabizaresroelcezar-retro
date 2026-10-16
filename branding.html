@@ -77,8 +77,42 @@
     .swatch i { display: block; height: 80px; border-bottom: 2px solid #000; }
     .swatch div { padding: 6px; font: 13px Tahoma, sans-serif; }
     .swatch b { display: block; }
+    .swatch { padding: 0; font: inherit; color: inherit; text-align: left; cursor: inherit; width: 100%; }
+    .swatch:hover, .swatch:focus-visible { outline: 3px dashed #000080; outline-offset: 2px; }
+    .swatch div small { display: block; color: #000080; font-size: 11px; margin-top: 2px; }
+    .swatch.copied div small { color: #008000; font-weight: bold; }
     .paint-wells { display: flex; flex-wrap: wrap; gap: 2px; margin-top: 6px; }
     .paint-wells i { width: 16px; height: 16px; box-shadow: var(--bevel-in); }
+
+    /* HERO extras */
+    .aka { font-family: var(--pixel); font-size: 26px; color: #0ff; margin: 0 0 6px; letter-spacing: 2px; }
+    .aka b { color: #ff0; text-shadow: 0 0 8px #ff0; }
+    .jump { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; margin-top: 18px; }
+    .jump-label { width: 100%; font-family: var(--pixel); font-size: 18px; color: #aaa; margin: 0; }
+
+    /* TYPE: try it */
+    .try { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 10px; font-family: var(--comic); font-weight: bold; }
+    .try input { flex: 1; min-width: 180px; font: 18px Manrope, sans-serif; padding: 6px 8px; border: 0; box-shadow: var(--bevel-in); background: #fff; }
+
+    /* LOGO USAGE: do's and don'ts */
+    .usage-title { font-family: var(--comic); font-size: clamp(30px, 6vw, 44px); color: #fff; text-shadow: 3px 3px 0 #ff00c8, 6px 6px 0 #00e5ff; margin: 0 0 6px; text-align: center; }
+    .usage { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; }
+    .use { margin: 0; border: 3px solid; background: #0a0a0a; text-align: center; }
+    .use.ok { border-color: #39ff14; }
+    .use.no { border-color: #ff3131; }
+    .use .art { height: 170px; display: grid; place-items: center; overflow: hidden; }
+    .use .art img { width: 110px; height: auto; }
+    .use figcaption { padding: 8px 10px 10px; font-size: 16px; color: #fff; }
+    .use figcaption b { display: block; font-family: var(--pixel); font-size: 24px; letter-spacing: 2px; }
+    .use.ok b { color: #39ff14; }
+    .use.no b { color: #ff3131; }
+    .art.black { background: #0a0a0a; }
+    .art.white { background: #f5f4f0; }
+    .art.room img { width: 80px; outline: 2px dashed #ff7518; outline-offset: 22px; }
+    .art.stretch img { transform: scaleX(1.7); }
+    .art.tilt img { transform: rotate(-24deg); }
+    .art.busy { background: url("assets/gifs/bg-matrix.gif"); }
+    .art.busy img { filter: hue-rotate(140deg) saturate(4) drop-shadow(4px 4px 0 #f0f); }
   </style>
 </head>
 <body>
@@ -97,6 +131,7 @@
       <p class="welcome">~*~ Personal Branding &amp; Logo Study ~*~</p>
       <img class="logo" src="assets/img/logo.png" alt="CABZ logo" width="230" height="230">
       <h1 class="wordart">Cabizares,<br>Roel Cezar</h1>
+      <p class="aka">a.k.a. <b>Cabz</b></p>
       <p class="name comic">A complete visual identity exploration, from logo construction and typography to design rationale. Every element is intentional, rooted in who I am and what I do.</p>
       <div class="chips">
         <span class="btn95">Visual Identity</span>
@@ -104,6 +139,16 @@
         <span class="btn95">Branding</span>
         <span class="btn95">Illustration</span>
       </div>
+      <nav class="jump" aria-label="Branding sections">
+        <p class="jump-label">~ jump to ~</p>
+        <a class="btn95" href="#brief">📝 Brief</a>
+        <a class="btn95" href="#construction">📐 Construction</a>
+        <a class="btn95" href="#mark">💻 The Mark</a>
+        <a class="btn95" href="#type">🔤 Typography</a>
+        <a class="btn95" href="#palette">🎨 Palette</a>
+        <a class="btn95" href="#usage">✔ Do's &amp; Don'ts</a>
+        <a class="btn95" href="#behance">🔥 Behance</a>
+      </nav>
     </div>
     <div class="rail right" aria-hidden="true">
       <img class="gif" src="assets/gifs/pencil.gif" alt="" width="100" height="200" style="width:60px">
@@ -114,7 +159,7 @@
 </header>
 
 <!-- ============ DESKTOP: the brief ============ -->
-<section class="zone z-desktop">
+<section class="zone z-desktop" id="brief">
   <div class="zone-inner narrow">
     <div class="win" style="margin:0">
       <div class="win-title"><span class="t">📝 The_Brief.txt - Notepad</span><span class="ctrls" aria-hidden="true"><span>_</span><span>□</span><span>×</span></span></div>
@@ -131,7 +176,7 @@
 <div class="divider" aria-hidden="true"><img src="assets/gifs/div-chrome.gif" alt="" width="425" height="16"></div>
 
 <!-- ============ BLUEPRINT: logo construction ============ -->
-<section class="zone z-blueprint">
+<section class="zone z-blueprint" id="construction">
   <div class="zone-inner">
     <div class="rail left" aria-hidden="true">
       <img class="gif" src="assets/gifs/pencil.gif" alt="" width="100" height="200" style="width:60px">
@@ -158,7 +203,7 @@
 </section>
 
 <!-- ============ HACKER: the mark ============ -->
-<section class="zone z-hacker">
+<section class="zone z-hacker" id="mark">
   <div class="zone-inner narrow">
     <div class="term">
       <h2 style="font-size:36px;font-weight:normal;margin:0">C:\CABZ&gt; explain mark.svg</h2>
@@ -176,7 +221,7 @@
 </section>
 
 <!-- ============ SKY / WORDART: typography ============ -->
-<section class="zone z-sky">
+<section class="zone z-sky" id="type">
   <div class="zone-inner">
     <div class="rail left" aria-hidden="true">
       <img class="gif" src="assets/gifs/sun.gif" alt="" width="69" height="69">
@@ -186,6 +231,7 @@
       <p class="wordart center" style="color:#ff2d95;text-shadow:3px 3px 0 #ffde00,6px 6px 0 #00a2ff">Typography</p>
       <div class="panel lined">
         <p style="margin-top:0">Type is the voice of the brand. A modern geometric sans-serif, <b>Manrope</b>, anchors the system: clean enough for interfaces, expressive enough for headlines.</p>
+        <label class="try">Try it: <input type="text" id="try-type" maxlength="40" placeholder="Type anything to preview it in Manrope" autocomplete="off"></label>
         <div class="specimen">
           <div class="row"><span class="label">Light 300</span><span class="w300">Aa Bb Cc Dd Ee Ff Gg Hh Ii</span></div>
           <div class="row"><span class="label">Medium 500</span><span class="w500">Aa Bb Cc Dd Ee Ff Gg Hh Ii</span></div>
@@ -209,7 +255,7 @@
 </section>
 
 <!-- ============ DESKTOP / MS PAINT: palette ============ -->
-<section class="zone z-computers">
+<section class="zone z-computers" id="palette">
   <div class="zone-inner narrow">
     <div class="win" style="margin:0">
       <div class="win-title"><span class="t">🎨 palette.bmp - Paint</span><span class="ctrls" aria-hidden="true"><span>_</span><span>□</span><span>×</span></span></div>
@@ -218,23 +264,39 @@
         <h2 class="comic" style="margin-top:0">Color Palette</h2>
         <p>A restrained palette anchored by black and orange. Every color earns its place: no decoration, only function. (Yes, this retro site breaks every one of these rules. On purpose.)</p>
         <div class="swatches">
-          <div class="swatch"><i style="background:#0A0A0A"></i><div><b>Void Black</b>#0A0A0A</div></div>
-          <div class="swatch"><i style="background:#FF7518"></i><div><b>Signal Orange</b>#FF7518</div></div>
-          <div class="swatch"><i style="background:#F5F4F0"></i><div><b>Warm White</b>#F5F4F0</div></div>
-          <div class="swatch"><i style="background:#333333"></i><div><b>Body Text</b>#333333</div></div>
-          <div class="swatch"><i style="background:#999999"></i><div><b>Secondary</b>#999999</div></div>
+          <button type="button" class="swatch" data-hex="#0A0A0A"><i style="background:#0A0A0A"></i><div><b>Void Black</b>#0A0A0A<small>click to copy</small></div></button>
+          <button type="button" class="swatch" data-hex="#FF7518"><i style="background:#FF7518"></i><div><b>Signal Orange</b>#FF7518<small>click to copy</small></div></button>
+          <button type="button" class="swatch" data-hex="#F5F4F0"><i style="background:#F5F4F0"></i><div><b>Warm White</b>#F5F4F0<small>click to copy</small></div></button>
+          <button type="button" class="swatch" data-hex="#333333"><i style="background:#333333"></i><div><b>Body Text</b>#333333<small>click to copy</small></div></button>
+          <button type="button" class="swatch" data-hex="#999999"><i style="background:#999999"></i><div><b>Secondary</b>#999999<small>click to copy</small></div></button>
         </div>
       </div>
       <div class="paint-wells" aria-hidden="true">
         <i style="background:#000"></i><i style="background:#808080"></i><i style="background:#800000"></i><i style="background:#808000"></i><i style="background:#008000"></i><i style="background:#008080"></i><i style="background:#000080"></i><i style="background:#800080"></i><i style="background:#ff7518"></i><i style="background:#fff"></i><i style="background:#c0c0c0"></i><i style="background:#f00"></i><i style="background:#ff0"></i><i style="background:#0f0"></i><i style="background:#0ff"></i><i style="background:#00f"></i><i style="background:#f0f"></i><i style="background:#f5f4f0"></i>
       </div>
-      <div class="win-status"><span>For Help, click Help Topics on the Help Menu.</span><span>320,240</span></div>
+      <div class="win-status"><span class="paint-status" aria-live="polite">For Help, click Help Topics on the Help Menu.</span><span>320,240</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VAPORWAVE: logo usage ============ -->
+<section class="zone z-vapor" id="usage">
+  <div class="zone-inner narrow">
+    <h2 class="usage-title">Logo Do's &amp; Don'ts</h2>
+    <p class="center" style="color:#fff;text-shadow:0 0 6px #000,0 0 2px #000">A mark is only as strong as how it's used. The short version of the brand guidelines:</p>
+    <div class="usage">
+      <figure class="use ok"><div class="art black"><img src="assets/img/logo.png" alt="Logo on black" width="160" height="160" loading="lazy"></div><figcaption><b>✔ DO</b>Use the dark version on Void Black.</figcaption></figure>
+      <figure class="use ok"><div class="art white"><img src="assets/img/logo_light.png" alt="Light-background logo on warm white" width="160" height="160" loading="lazy"></div><figcaption><b>✔ DO</b>Use the light version on Warm White.</figcaption></figure>
+      <figure class="use ok"><div class="art black room"><img src="assets/img/logo.png" alt="Logo with clear space marked around it" width="160" height="160" loading="lazy"></div><figcaption><b>✔ DO</b>Give it room: keep clear space on every side.</figcaption></figure>
+      <figure class="use no"><div class="art black stretch"><img src="assets/img/logo.png" alt="Logo stretched sideways" width="160" height="160" loading="lazy"></div><figcaption><b>✘ DON'T</b>Stretch or squash it.</figcaption></figure>
+      <figure class="use no"><div class="art black tilt"><img src="assets/img/logo.png" alt="Logo rotated" width="160" height="160" loading="lazy"></div><figcaption><b>✘ DON'T</b>Rotate it.</figcaption></figure>
+      <figure class="use no"><div class="art busy"><img src="assets/img/logo.png" alt="Logo recolored on a busy animated background" width="160" height="160" loading="lazy"></div><figcaption><b>✘ DON'T</b>Recolor it or drop it on a busy GIF background. (Yes, this whole site. We know.)</figcaption></figure>
     </div>
   </div>
 </section>
 
 <!-- ============ FIRE: Behance CTA ============ -->
-<section class="zone z-flames">
+<section class="zone z-flames" id="behance">
   <div class="zone-inner narrow center">
     <div class="collage" aria-hidden="true">
       <img class="gif" src="assets/gifs/fire-2.gif" alt="" width="97" height="200" style="height:110px;width:auto">
@@ -264,5 +326,48 @@
 <script src="assets/geocities.js"></script>
 <script src="assets/extras.js"></script>
 <script src="assets/retro.js"></script>
+<script>
+  (function () {
+    /* Typography: preview your own text */
+    var input = document.getElementById("try-type");
+    var rows = document.querySelectorAll(".specimen .row span:last-child");
+    var sample = rows.length ? rows[0].textContent : "";
+    input.addEventListener("input", function () {
+      var t = input.value.trim() || sample;
+      rows.forEach(function (r) { r.textContent = t; });
+    });
+    /* Palette: click a swatch to copy its hex */
+    var status = document.querySelector(".paint-status");
+    var idle = status.textContent, timer = 0;
+    function reset() {
+      document.querySelectorAll(".swatch").forEach(function (s) { s.classList.remove("copied"); s.querySelector("small").textContent = "click to copy"; });
+    }
+    function copied(btn, hex, ok) {
+      reset();
+      btn.classList.add("copied");
+      btn.querySelector("small").textContent = ok ? "copied! ✔" : hex;
+      status.textContent = ok ? "Copied " + hex + " to the clipboard." : "Couldn't copy. The hex is " + hex + ".";
+      clearTimeout(timer);
+      timer = setTimeout(function () { status.textContent = idle; reset(); }, 2500);
+    }
+    function legacyCopy(text) {
+      var ta = document.createElement("textarea");
+      ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) {}
+      ta.remove();
+      return ok;
+    }
+    document.querySelectorAll(".swatch[data-hex]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var hex = btn.getAttribute("data-hex");
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(hex).then(function () { copied(btn, hex, true); }, function () { copied(btn, hex, legacyCopy(hex)); });
+        } else copied(btn, hex, legacyCopy(hex));
+      });
+    });
+  })();
+</script>
 </body>
 </html>

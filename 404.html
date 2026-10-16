@@ -7,6 +7,7 @@
   <title>404 ~*~ This page has moved! ~*~ Cabz's World</title>
   <meta name="robots" content="noindex">
   <link rel="icon" href="assets/img/favicon.png">
+  <script>try { if (localStorage.getItem("cabz-lite") === "1") document.documentElement.classList.add("lite"); } catch (e) {}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=VT323&display=swap" rel="stylesheet">
@@ -17,10 +18,17 @@
     .lost h1 { font-family: var(--comic); color: #0ff; font-size: clamp(24px, 5vw, 36px); margin: 10px 0; }
     .lost .bsod { max-width: 620px; margin: 18px auto; background: #0000aa; color: #fff; font: 18px/1.4 var(--pixel); text-align: left; padding: 16px 20px; border: 2px solid #aaa; }
     .lost .bsod .hl { background: #aaa; color: #0000aa; padding: 0 6px; }
+    .lost-zone { min-height: 100vh; }
+    @media (min-width: 1440px) { .lost-zone { min-height: calc(100vh / 1.1); } }
+    .suggest { font-family: var(--comic); font-size: 22px; color: #ff0; margin: 14px 0; }
+    .suggest a { color: #0ff; font-weight: bold; }
+    .hood { max-width: 620px; margin: 18px auto; }
+    .hood h2 { font-family: var(--pixel); font-weight: normal; font-size: 26px; color: #0f0; margin: 0 0 8px; letter-spacing: 2px; }
+    .hood nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 4px; }
   </style>
 </head>
 <body>
-<main class="zone z-space" style="min-height:100vh">
+<main class="zone z-space lost-zone">
   <div class="zone-inner">
     <div class="rail left" aria-hidden="true">
       <img class="gif" src="assets/gifs/construction-digger.gif" alt="" width="96" height="66">
@@ -35,10 +43,24 @@
       <div class="bsod" role="note">
         <p style="margin-top:0;text-align:center"><span class="hl">CABZ'S WORLD</span></p>
         <p>A fatal exception 404 has occurred at GEOCITIES:/CABZ/<span id="lost-path">???</span>. The page you were looking for has been abducted by aliens, eaten by a dinosaur, or never existed.</p>
-        <p>* Press the button below to return to the homepage.<br>* Press CTRL+ALT+DEL to restart your computer. You will lose any unsaved GIFs.</p>
-        <p style="margin-bottom:0;text-align:center">Press any key to continue <span class="blink">_</span></p>
+        <p>* Pick a neighborhood below to keep exploring.<br>* Press CTRL+ALT+DEL to restart your computer. You will lose any unsaved GIFs.</p>
+        <p style="margin-bottom:0;text-align:center">Press ENTER to continue <span class="blink">_</span></p>
       </div>
+      <p class="suggest" id="suggest" hidden></p>
       <p><a class="btn95" href="./">🏠 Take me home to Cabz's World</a></p>
+      <div class="hood">
+        <h2>~ OR VISIT A NEIGHBORHOOD ~</h2>
+        <nav aria-label="Site sections">
+          <a class="btn95" href="./#about">🏠 About Me</a>
+          <a class="btn95" href="./#services">💼 Services</a>
+          <a class="btn95" href="./#gallery">🖼️ Projects</a>
+          <a class="btn95" href="./#cheats">🕹️ Cheat Codes</a>
+          <a class="btn95" href="./#sidequests">🎮 Side Quests</a>
+          <a class="btn95" href="./#movies">🚀 Movie Night</a>
+          <a class="btn95" href="./#guestbook">📖 Guestbook</a>
+          <a class="btn95" href="branding.html">✏️ Branding</a>
+        </nav>
+      </div>
       <p><a href="./"><img class="gif" src="assets/gifs/home-rainbow.gif" alt="Home" width="150" height="60"></a></p>
     </div>
     <div class="rail right" aria-hidden="true">
@@ -53,8 +75,30 @@
   (function () {
     var p = location.pathname.replace(/^\/cabizaresroelcezar-retro\/?/, "") || "index.htm";
     document.getElementById("lost-path").textContent = p.toUpperCase().slice(0, 40);
-    document.addEventListener("keydown", function (e) { if (e.key && e.key.length === 1 || e.key === "Enter") location.href = "./"; });
+    /* "Did you mean...?" from words in the broken URL */
+    var GUESS = [
+      [/about|bio|who/, "./#about", "About Me"], [/service|hire/, "./#services", "Services"],
+      [/tool|stack|skill|tech/, "./#toolbox", "Toolbox"], [/job|office|current|career/, "./#office", "Currently At"],
+      [/project|portfolio|gallery|work/, "./#gallery", "Projects"], [/cheat|konami|game/, "./#cheats", "Cheat Codes"],
+      [/quest|keycabz|crypto|yo-?bi|music|spotify/, "./#sidequests", "Side Quests"], [/movie|star|wars|future|bttf/, "./#movies", "Movie Night"],
+      [/hero|comic/, "./#heroes", "My Heroes"], [/kudo|friend|mentor/, "./#kudos", "Kudos"],
+      [/contact|guest|mail|hello|message/, "./#guestbook", "the Guestbook"], [/brand|logo|identity|design/, "branding.html", "the Branding page"],
+      [/resume|cv/, "assets/resume.pdf", "my Résumé"]
+    ];
+    var low = p.toLowerCase();
+    for (var i = 0; i < GUESS.length; i++) {
+      if (GUESS[i][0].test(low)) {
+        var s = document.getElementById("suggest");
+        s.innerHTML = 'Did you mean <a href="' + GUESS[i][1] + '">' + GUESS[i][2] + "</a>?";
+        s.hidden = false;
+        break;
+      }
+    }
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && !(e.target.closest && e.target.closest("a, button"))) location.href = "./";
+    });
   })();
 </script>
+<script src="assets/extras.js"></script>
 </body>
 </html>
